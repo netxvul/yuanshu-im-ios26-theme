@@ -63,7 +63,7 @@ local keyboard(theme) =
           style: 'VStackStyle1',
           subviews: [
             { Cell: 'collection' },
-            { Cell: 'symbolButton' },
+            { Cell: 'returnButton' },
           ],
         },
       },
@@ -74,7 +74,7 @@ local keyboard(theme) =
             { Cell: 'number1Button' },
             { Cell: 'number4Button' },
             { Cell: 'number7Button' },
-            { Cell: 'returnButton' },
+            { Cell: 'symbolButton' },
           ],
         },
       },
@@ -232,7 +232,7 @@ local keyboard(theme) =
 
     symbolButtonForegroundStyle: utils.makeTextStyle(
       params={
-        text: '#+=',
+        text: 'ツ',
         normalColor: color[theme]['按键前景颜色'],
         highlightColor: color[theme]['按键前景颜色'],
         fontSize: fontSize['按键前景文字大小'] - 3,

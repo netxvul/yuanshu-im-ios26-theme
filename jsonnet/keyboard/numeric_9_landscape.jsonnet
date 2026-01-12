@@ -71,7 +71,7 @@ local keyboard(theme) =
                 style: 'VStackStyle1',
                 subviews: [
                   { Cell: 'collection' },
-                  { Cell: 'symbolButton' },
+                  { Cell: 'returnButton' },
                 ],
               },
             },
@@ -82,7 +82,7 @@ local keyboard(theme) =
                   { Cell: 'number1Button' },
                   { Cell: 'number4Button' },
                   { Cell: 'number7Button' },
-                  { Cell: 'returnButton' },
+                  { Cell: 'symbolButton' },
                 ],
               },
             },

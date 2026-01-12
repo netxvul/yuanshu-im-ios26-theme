@@ -675,7 +675,7 @@ local keyboard(theme, orientation) =
         insets: { top: 5, left: 3, bottom: 5, right: 3 },
         normalColor: color[theme]['enter键背景(蓝色)'],
         highlightColor: color[theme]['功能键背景颜色-高亮'],
-        cornerRadius: 9,
+        cornerRadius: 7,
         normalLowerEdgeColor: color[theme]['底边缘颜色-普通'],
         highlightLowerEdgeColor: color[theme]['底边缘颜色-高亮'],
       }

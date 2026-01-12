@@ -51,8 +51,8 @@ local keyboarLayout(theme="light") = {
       {
         HStack: {
           subviews: [
-            { Cell: 'symbolButton' },
             { Cell: '123Button' },
+            { Cell: 'symbolButton' },
             { Cell: 'spaceButton' },
             { Cell: 'spaceRightButton' },
             { Cell: 'enterButton' },
@@ -117,8 +117,8 @@ local keyboarLayout(theme="light") = {
             {
               HStack: {
                 subviews: [
-                  { Cell: 'symbolButton' },
                   { Cell: '123Button' },
+                  { Cell: 'symbolButton' },
                   { Cell: 'spaceButton' },
                 ],
               },
@@ -262,8 +262,8 @@ local keyboarLayout(theme="light") = {
       {
         HStack: {
           subviews: [
-            { Cell: 'symbolButton' },
             { Cell: '123Button' },
+            { Cell: 'symbolButton' },
             { Cell: 'spaceButton' },
             { Cell: 'spaceRightButton' },
             // {
@@ -470,12 +470,12 @@ local keyboarLayout(theme="light") = {
     },
     'symbol键size': {
       width: {
-        percentage: 0.15,
+        percentage: 0.115,
       },
     },
     '123键size': {
       width: {
-        percentage: 0.115,
+        percentage: 0.15,
       },
     },
     'space键size': {
