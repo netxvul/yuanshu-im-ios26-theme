@@ -98,20 +98,21 @@
     j: {
       selectedIndex: 1,
       list: [
-        { action: { openURL: '#pasteboardContent' }, label: { systemImageName: 'link' }, fontSize: 14 },
-        { action: { runTranslateScript: '谷歌中英互译' }, label: { systemImageName: 'translate' }, fontSize: 14 },
-        { action: { runScript: 'DeepSeek' }, label: { systemImageName: 'message.fill' }, fontSize: 14 },
-        { action: { runScript: 'Unicode' }, label: { text: 'U编' }, fontSize: 14 },
+        { action: { openURL: '#pasteboardContent' }, label: { systemImageName: 'safari.fill' }, fontSize: 14 },
+        // { action: { runTranslateScript: '谷歌中英互译' }, label: { systemImageName: 'translate' }, fontSize: 14 },
+        { action: { runScript: 'DeepSeek' }, label: { systemImageName: 'cursorarrow.click.2' }, fontSize: 14 },
+        // { action: { runScript: 'Unicode' }, label: { text: 'U编' }, fontSize: 14 },
       ],
     },
     h: {
       selectedIndex: 1,
       list: [
-        { action: { symbol: 'https://' }, label: { systemImageName: 'https' }, fontSize: 14 },
-        { action: { symbol: 'http://' }, label: { systemImageName: 'http' }, fontSize: 14 },
-        { action: { symbol: 'com' }, label: { systemImageName: 'com' }, fontSize: 14 },
-        { action: { symbol: 'cn' }, label: { systemImageName: 'cn' }, fontSize: 14 },
-        { action: { symbol: 'dev' }, label: { systemImageName: 'dev' }, fontSize: 14 },
+        { action: { symbol: 'https://' }, label: { text: 'https' }, fontSize: 14 },
+        { action: { symbol: 'http://' }, label: { text: 'http' }, fontSize: 14 },
+        { action: { symbol: '.com' }, label: { text: 'com' }, fontSize: 14 },
+        { action: { symbol: '.cn' }, label: { text: 'cn' }, fontSize: 14 },
+        { action: { symbol: '.dev' }, label: { text: 'dev' }, fontSize: 14 },
+        { action: { symbol: '.org' }, label: { text: 'org' }, fontSize: 14 },
       ],
     },
     d: {
