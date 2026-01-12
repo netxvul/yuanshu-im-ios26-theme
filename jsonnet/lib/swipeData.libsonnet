@@ -64,7 +64,7 @@
     i: { action: { character: '*' }, label: { text: '*' } },
     o: { action: { character: '(' }, label: { text: '(' } },
     p: { action: { character: ')' }, label: { text: ')' } },
-    a: { action: { character: '~' }, label: { text: '~' } },
+    a: { action: { shortcut: '#selectText' }, label: { text: 'all' } },
     s: { action: { character: '_' }, label: { text: '_' } },
     d: { action: { character: '+' }, label: { text: '+' } },
     f: { action: { character: '{' }, label: { text: '{' } },
@@ -99,8 +99,8 @@
       center: { x: 0.5, y: 0.8 },
     },
     n: {
-      action: { shortcut: '#selectText' },
-      label: { text: 'select' },
+      action: { shortcut: '#deleteText' },
+      label: { text: 'empty' },
       center: { x: 0.5, y: 0.8 },
     },
     m: {

@@ -675,7 +675,7 @@ local keyboard(theme, orientation) =
         insets: { top: 5, left: 3, bottom: 5, right: 3 },
         normalColor: color[theme]['enter键背景(蓝色)'],
         highlightColor: color[theme]['功能键背景颜色-高亮'],
-        cornerRadius: 7,
+        cornerRadius: 9,
         normalLowerEdgeColor: color[theme]['底边缘颜色-普通'],
         highlightLowerEdgeColor: color[theme]['底边缘颜色-高亮'],
       }
@@ -719,7 +719,7 @@ local keyboard(theme, orientation) =
         insets: { top: 5, left: 3, bottom: 5, right: 3 },
         normalColor: color[theme]['字母键背景颜色-普通'],
         highlightColor: color[theme]['字母键背景颜色-高亮'],
-        cornerRadius: 7,
+        cornerRadius: 9,
         normalLowerEdgeColor: color[theme]['底边缘颜色-普通'],
         highlightLowerEdgeColor: color[theme]['底边缘颜色-高亮'],
       }
@@ -730,7 +730,7 @@ local keyboard(theme, orientation) =
         insets: { top: 5, left: 3, bottom: 6, right: 3 },
         normalColor: color[theme]['功能键背景颜色-普通'],
         highlightColor: color[theme]['功能键背景颜色-高亮'],
-        cornerRadius: 7,
+        cornerRadius: 9,
         normalLowerEdgeColor: color[theme]['底边缘颜色-普通'],
         highlightLowerEdgeColor: color[theme]['底边缘颜色-高亮'],
       }
@@ -739,7 +739,7 @@ local keyboard(theme, orientation) =
       params={
         normalColor: color[theme]['气泡背景颜色'],
         highlightColor: color[theme]['气泡高亮颜色'],
-        cornerRadius: 7,
+        cornerRadius: 9,
         shadowColor: color[theme]['长按背景阴影颜色'],
         shadowOffset: { x: 0, y: 5 },
       }

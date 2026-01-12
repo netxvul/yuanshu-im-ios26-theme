@@ -107,23 +107,27 @@
     h: {
       selectedIndex: 1,
       list: [
-        { action: { symbol: 'https://' }, label: { text: 'https' }, fontSize: 14 },
-        { action: { symbol: 'http://' }, label: { text: 'http' }, fontSize: 14 },
+        { action: { symbol: 'https://' }, label: { systemImageName: 'https' }, fontSize: 14 },
+        { action: { symbol: 'http://' }, label: { systemImageName: 'http' }, fontSize: 14 },
+        { action: { symbol: 'com' }, label: { systemImageName: 'com' }, fontSize: 14 },
+        { action: { symbol: 'cn' }, label: { systemImageName: 'cn' }, fontSize: 14 },
+        { action: { symbol: 'dev' }, label: { systemImageName: 'dev' }, fontSize: 14 },
       ],
     },
     d: {
       selectedIndex: 1,
       list: [
-        { action: { sendKeys: '/date' }, label: { text: '日期' }, fontSize: 14 },
-        { action: { sendKeys: '/fsj' }, label: { text: '时间' }, fontSize: 14 },
-        { action: { sendKeys: '/fjq' }, label: { text: '节气' }, fontSize: 14 },
+        { action: { sendKeys: 'date' }, label: { text: 'date' }, fontSize: 14 },
+        { action: { sendKeys: 'time' }, label: { text: 'time' }, fontSize: 14 },
+        { action: { character: 'N' }, label: { text: 'lunar' }, fontSize: 14 },
+        { action: { character: 'R' }, label: { text: 'RMB' }, fontSize: 14 },
       ],
     },
     m: {
       selectedIndex: 1,
       list: [
-        { action: { sendKeys: '/sjh' }, label: { text: '手机' }, fontSize: 14 },
-        { action: { sendKeys: '/mail' }, label: { text: '邮箱' }, fontSize: 14 },
+      //  { action: { sendKeys: '/sjh' }, label: { text: '手机' }, fontSize: 14 },
+        { action: { sendKeys: '/omail' }, label: { text: '邮箱' }, fontSize: 14 },
       ],
     },
     '123': {
@@ -135,7 +139,6 @@
         { action: { symbol: '=' }, label: { text: '=' } },
         { action: { symbol: '×' }, label: { text: '×' } },
         { action: { symbol: '÷' }, label: { text: '÷' } },
-        { action: { symbol: '√' }, label: { text: '√' } },
       ],
     },
     enter: {

@@ -87,7 +87,7 @@ local keyboard(theme) =
       buttonStyleType: 'geometry',
       insets: { top: 5, left: 3, bottom: 5, right: 3 },
       normalColor: color[theme]['符号键盘左侧collection背景颜色'],
-      cornerRadius: 7,
+      cornerRadius: 9,
       normalShadowColor: color[theme]['符号键盘左侧collection背景下边缘颜色'],
       normalLowerEdgeColor: color[theme]['符号键盘左侧collection背景下边缘颜色'],
     },
@@ -100,7 +100,7 @@ local keyboard(theme) =
       insets: { top: 7, left: 4, bottom: 7, right: 4 },
       normalColor: '00000000',
       highlightColor: color[theme]['字母键背景颜色-普通'],
-      cornerRadius: 7,
+      cornerRadius: 9,
     },
     categoryCollectionCellForegroundStyle: {
       buttonStyleType: 'text',
@@ -122,7 +122,7 @@ local keyboard(theme) =
       buttonStyleType: 'geometry',
       insets: { top: 5, left: 3, bottom: 5, right: 3 },
       normalColor: color[theme]['符号键盘右侧collection背景颜色'],
-      cornerRadius: 7,
+      cornerRadius: 9,
       normalLowerEdgeColor: color[theme]['符号键盘右侧collection背景下边缘颜色'],
     },
     descriptionCollectionCellStyle: {
@@ -259,7 +259,7 @@ local keyboard(theme) =
         insets: { top: 4, left: 3, bottom: 4, right: 3 },
         normalColor: color[theme]['功能键背景颜色-普通'],
         highlightColor: color[theme]['功能键背景颜色-高亮'],
-        cornerRadius: 7,
+        cornerRadius: 9,
         normalLowerEdgeColor: color[theme]['底边缘颜色-普通'],
         highlightLowerEdgeColor: color[theme]['底边缘颜色-高亮'],
       }

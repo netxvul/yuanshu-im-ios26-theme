@@ -25,7 +25,7 @@ local sumHeights(arr) = (
   // 杂项设置
   // 键盘高度，建议统一使用同一单位，不要混用
   '竖屏': {
-    'preedit高度': 22,
+    'preedit高度': 25,
     'toolbar高度': 41,
     'keyboard高度': 216,
     '键盘总高度': sumHeights([
