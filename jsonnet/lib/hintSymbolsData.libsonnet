@@ -130,8 +130,11 @@
     m: {
       selectedIndex: 0,
       list: [
-        { action: { sendKeys: '/sjh' }, label: { systemImageName: 'numbers' }, fontSize: 18 },
+        { action: { sendKeys: '/mail' }, label: { systemImageName: 'tray' }, fontSize: 18 },
         { action: { sendKeys: '/omail' }, label: { systemImageName: 'tray.full' }, fontSize: 18 },
+        { action: { sendKeys: '/ip' }, label: { systemImageName: 'rectangle.and.pencil.and.ellipsis' }, fontSize: 18 },
+        { action: { sendKeys: '/web' }, label: { systemImageName: 'globe.asia.australia' }, fontSize: 18 },
+        { action: { sendKeys: '/nas' }, label: { systemImageName: 'globe.asia.australia.fill' }, fontSize: 18 },
       ],
     },
     '123': {
