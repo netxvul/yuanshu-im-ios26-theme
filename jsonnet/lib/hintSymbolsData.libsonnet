@@ -138,10 +138,11 @@
       selectedIndex: 0,
       size: { width: 40, height: 40 },
       list: [
-        { action: { shortcut: '#简繁切换' }, label: { systemImageName: 'translate' },fontSize: 18 },
-        { action: { shortcut: '#方案切换' }, label: { systemImageName: 'pencil.tip.crop.circle' } ,fontSize: 18 },
+        { action: { shortcut: '#showPasteboardView' }, label: { systemImageName: 'receipt' } , fontSize: 18},
         { action: { shortcut: '#showPhraseView' }, label: { systemImageName: 'book.pages' } , fontSize: 18},
         { action: { shortcut: '#toggleScriptView' }, label: { systemImageName: 'apple.terminal' }, fontSize: 18 },
+        { action: { shortcut: '#简繁切换' }, label: { systemImageName: 'chineseyuanrenminbisign.gauge.chart.leftthird.topthird.rightthird' },fontSize: 18 },
+        { action: { shortcut: '#方案切换' }, label: { systemImageName: 'pencil.tip.crop.circle' } ,fontSize: 18 },
 
       ],
     },

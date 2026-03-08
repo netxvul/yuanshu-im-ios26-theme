@@ -212,12 +212,12 @@ local keyboard(theme) =
       }
     ),
 
-    returnButtonForegroundStyle: utils.makeTextStyle(
+    returnButtonForegroundStyle: utils.makeSystemImageStyle(
       params={
-        text: '返回',
+        systemImageName: 'arrow.backward',
         normalColor: color[theme]['按键前景颜色'],
         highlightColor: color[theme]['按键前景颜色'],
-        fontSize: fontSize['按键前景文字大小'] - 3,
+        fontSize: fontSize['按键前景文字大小'],
       }
     ),
 
@@ -320,12 +320,12 @@ local keyboard(theme) =
       }
     ),
 
-    enterButtonForegroundStyle: utils.makeTextStyle(
+    enterButtonForegroundStyle: utils.makeSystemImageStyle(
       params={
-        text: '换行',
-        normalColor: color[theme]['按键前景颜色'],
-        highlightColor: color[theme]['按键前景颜色'],
-        fontSize: fontSize['按键前景文字大小'] - 3,
+        systemImageName: 'arrow.turn.left.down',
+        normalColor: color[theme]['enter键背景(蓝色)'],
+        highlightColor: color[theme]['功能键背景颜色-高亮'],
+        fontSize: fontSize['按键前景文字大小'],
       }
     ),
 

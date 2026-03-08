@@ -145,9 +145,9 @@ local keyboard(theme) =
       }
     ),
 
-    symbolreturnButtonForegroundStyle: utils.makeTextStyle(
+    symbolreturnButtonForegroundStyle: utils.makeSystemImageStyle(
       params={
-        text: '返回',
+        systemImageName: 'arrow.backward',
         normalColor: color[theme]['按键前景颜色'],
         highlightColor: color[theme]['按键前景颜色'],
         fontSize: fontSize['按键前景文字大小'] - 3,
