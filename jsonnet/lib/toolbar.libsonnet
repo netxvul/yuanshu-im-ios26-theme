@@ -1,6 +1,7 @@
 local center = import 'center.libsonnet';
 local color = import 'color.libsonnet';
 local fontSize = import 'fontSize.libsonnet';
+local others = import 'others.libsonnet';
 local utils = import 'utils.libsonnet';
 
 local getToolBar(theme) = {
@@ -413,7 +414,7 @@ local getToolBar(theme) = {
       insets: { top: 5, left: 3, bottom: 6, right: 3 },
       normalColor: color[theme]['功能键背景颜色-普通'],
       highlightColor: color[theme]['功能键背景颜色-高亮'],
-      cornerRadius: 7,
+      cornerRadius: others['圆角']['工具栏'],
       normalLowerEdgeColor: color[theme]['底边缘颜色-普通'],
       highlightLowerEdgeColor: color[theme]['底边缘颜色-高亮'],
     }

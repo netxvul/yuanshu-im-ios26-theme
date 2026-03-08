@@ -1,6 +1,7 @@
 local center = import 'center.libsonnet';
 local color = import 'color.libsonnet';
 local fontSize = import 'fontSize.libsonnet';
+local others = import 'others.libsonnet';
 
 // 文字前景样式
 local textStyle(text, fs, theme) = {  //fs 字体大小
@@ -26,7 +27,7 @@ local systemImageStyle(systemImageName, fs, theme) = {
 // 长按符号样式生成
 local holdSymbolsStyle(key, selectedIndex, size, symbol_list, theme) = {
   [key + 'ButtonHintSymbolsStyle']: {
-    insets: { top: 3, bottom: 3, left: 8, right: 8 },
+    insets: { top: 2, bottom: 2, left: 2, right: 2 },
     backgroundStyle: 'alphabeticHintSymbolsBackgroundStyle',
     [if size != {} then 'size']: {
       width: size.width,
@@ -75,37 +76,31 @@ local finalStyles(theme, hintSymbolsData) =
     ),
     std.objectFields(hintSymbolsData),
     {}
-  );
+  ) + {
+    'alphabeticHintSymbolsBackgroundStyle': {
+      buttonStyleType: 'geometry',
+      normalColor: color[theme]['长按背景颜色'],
+      normalShadowColor: color[theme]['长按背景阴影颜色'],
+      cornerRadius: others['圆角']['长按气泡'],
+      targetScale: {
+        x: 0.8,
+        y: 1.0,
+      },
+    },
+    'alphabeticHintSymbolsSelectedStyle': {
+      buttonStyleType: 'geometry',
+      normalColor: color[theme]['长按背景颜色'],
+      highlightColor: color[theme]['长按选中背景颜色'],
+      cornerRadius: others['圆角']['长按气泡选中'],
+      targetScale: {
+        x: 0.6,
+        y: 0.7,
+      },
+    },
+  };
 
 {
   getStyle(theme, hintSymbolsData):
     finalStyles(theme, hintSymbolsData),
-  '长按背景样式': {
-    buttonStyleType: 'fileImage',
-    normalImage: {
-      file: 'hold_back',
-      image: 'IMG1',
-    },
-    targetScale: {
-      x: 1,
-      y: 1.1,
-    },
-  },
-  '长按选中背景样式': {
-    buttonStyleType: 'fileImage',
-    insets: { left: 4, right: 3, top: 8, bottom: 8 },
-    normalImage: {
-      file: 'hint',
-      image: 'IMG1',
-    },
-    highlightImage: {
-      file: 'hint',
-      image: 'IMG1',
-    },
-    targetScale: {
-      x: 0.8,
-      y: 0.7,
-    },
-  },
 
 }

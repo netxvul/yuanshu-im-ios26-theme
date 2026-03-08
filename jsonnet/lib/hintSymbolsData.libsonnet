@@ -98,61 +98,65 @@
     j: {
       selectedIndex: 1,
       list: [
-        { action: { openURL: '#pasteboardContent' }, label: { systemImageName: 'safari.fill' }, fontSize: 14 },
-        // { action: { runTranslateScript: '谷歌中英互译' }, label: { systemImageName: 'translate' }, fontSize: 14 },
-        { action: { runScript: 'DeepSeek' }, label: { systemImageName: 'cursorarrow.click.2' }, fontSize: 14 },
-        // { action: { runScript: 'Unicode' }, label: { text: 'U编' }, fontSize: 14 },
+        { action: { openURL: '#pasteboardContent' }, label: { systemImageName: 'safari.fill' }, fontSize: 18 },
+        { action: { runTranslateScript: '谷歌中英互译' }, label: { systemImageName: 'translate' }, fontSize: 18 },
+        { action: { runScript: 'DeepSeek' }, label: { systemImageName: 'cursorarrow.click.2' }, fontSize: 18 },
+        { action: { runScript: 'Info' }, label: { systemImageName: 'gear' }, fontSize: 18 },
+        { action: { runScript: 'AI' }, label: { systemImageName: 'app.gift' },
+
+        fontSize: 18 },
       ],
     },
     h: {
       selectedIndex: 1,
       list: [
-        { action: { symbol: 'https://' }, label: { text: 'https' }, fontSize: 14 },
-        { action: { symbol: 'http://' }, label: { text: 'http' }, fontSize: 14 },
-        { action: { symbol: '.com' }, label: { text: 'com' }, fontSize: 14 },
-        { action: { symbol: '.cn' }, label: { text: 'cn' }, fontSize: 14 },
-        { action: { symbol: '.dev' }, label: { text: 'dev' }, fontSize: 14 },
-        { action: { symbol: '.org' }, label: { text: 'org' }, fontSize: 14 },
+        { action: { symbol: 'https://' }, label: { text: 'https' }, fontSize: 18 },
+        { action: { symbol: 'http://' }, label: { text: 'http' }, fontSize: 18 },
+        { action: { symbol: '.com' }, label: { text: 'com' }, fontSize: 18 },
+        { action: { symbol: '.cn' }, label: { text: 'cn' }, fontSize: 18 },
+        { action: { symbol: '.dev' }, label: { text: 'dev' }, fontSize: 18 },
+        { action: { symbol: '.org' }, label: { text: 'org' }, fontSize: 18 },
       ],
     },
     d: {
       selectedIndex: 1,
       list: [
-        { action: { sendKeys: 'date' }, label: { text: 'date' }, fontSize: 14 },
-        { action: { sendKeys: 'time' }, label: { text: 'time' }, fontSize: 14 },
-        { action: { character: 'N' }, label: { text: 'lunar' }, fontSize: 14 },
-        { action: { character: 'R' }, label: { text: 'RMB' }, fontSize: 14 },
+        { action: { sendKeys: 'date' }, label: { systemImageName: 'calendar' }, fontSize: 18 },
+        { action: { sendKeys: 'time' }, label: { systemImageName: 'clock' }, fontSize: 18 },
+        { action: { character: 'N' }, label: { systemImageName: 'calendar.and.person' }, fontSize: 18 },
+        { action: { character: 'R' }, label: { text: '￥' }, fontSize: 18 },
       ],
     },
     m: {
-      selectedIndex: 1,
+      selectedIndex: 0,
       list: [
-      //  { action: { sendKeys: '/sjh' }, label: { text: '手机' }, fontSize: 14 },
-        { action: { sendKeys: '/omail' }, label: { text: '邮箱' }, fontSize: 14 },
+        { action: { sendKeys: '/sjh' }, label: { systemImageName: 'numbers' }, fontSize: 18 },
+        { action: { sendKeys: '/omail' }, label: { systemImageName: 'tray.full' }, fontSize: 18 },
       ],
     },
     '123': {
-      selectedIndex: 1,
-      size: { width: 40, height: 53 },
+      selectedIndex: 0,
+      size: { width: 40, height: 40 },
       list: [
-        { action: { symbol: '+' }, label: { text: '+' } },
-        { action: { symbol: '-' }, label: { text: '-' } },
-        { action: { symbol: '=' }, label: { text: '=' } },
-        { action: { symbol: '×' }, label: { text: '×' } },
-        { action: { symbol: '÷' }, label: { text: '÷' } },
+        { action: { shortcut: '#简繁切换' }, label: { systemImageName: 'translate' },fontSize: 18 },
+        { action: { shortcut: '#方案切换' }, label: { systemImageName: 'pencil.tip.crop.circle' } ,fontSize: 18 },
+        { action: { shortcut: '#showPhraseView' }, label: { systemImageName: 'book.pages' } , fontSize: 18},
+        { action: { shortcut: '#toggleScriptView' }, label: { systemImageName: 'apple.terminal' }, fontSize: 18 },
+
       ],
     },
     enter: {
-      size: { width: 50, height: 53 },
+      size: { width: 40, height: 40 },
       selectedIndex: 0,
       list: [
-        { action: { shortcut: '#换行' }, label: { text: '换行' }, fontSize: 16 },
+        { action: { shortcut: '#换行' }, label: { systemImageName: 'arrow.turn.right.down' }, fontSize: 18 },
       ],
     },
     symbol: {
       selectedIndex: 0,
       list: [
-        { action: 'nextKeyboard', label: { systemImageName: 'globe' } },
+        { action: 'settings', label: { systemImageName: 'gear' }, fontSize: 18 },
+        { action: { runScript: 'Info' }, label: { systemImageName: 'apple.intelligence' }, fontSize: 18 },
       ],
     },
     // 其他可用字段名:

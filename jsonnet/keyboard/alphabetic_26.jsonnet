@@ -480,12 +480,12 @@ local keyboard(theme, orientation) =
       }
     ),
 
-    symbolButtonForegroundStyle: utils.makeTextStyle(
+    symbolButtonForegroundStyle: utils.makeSystemImageStyle(
       params={
-        text: '#+=',
+        systemImageName: 'globe',
         normalColor: color[theme]['按键前景颜色'],
         highlightColor: color[theme]['按键前景颜色'],
-        fontSize: fontSize['按键前景文字大小'] - 3,
+        fontSize: fontSize['按键前景文字大小'] + 2,
         center: center['功能键前景文字偏移'] { y: 0.5 },
       }
     ),
@@ -499,12 +499,12 @@ local keyboard(theme, orientation) =
       }
     ),
 
-    '123ButtonForegroundStyle': utils.makeTextStyle(
+    '123ButtonForegroundStyle': utils.makeSystemImageStyle(
       params={
-        text: '123',
+        systemImageName: 'numbers',
         normalColor: color[theme]['按键前景颜色'],
         highlightColor: color[theme]['按键前景颜色'],
-        fontSize: fontSize['按键前景文字大小'] - 3,
+        fontSize: fontSize['按键前景文字大小'],
         center: center['功能键前景文字偏移'] { y: 0.5 },
       }
     ),
@@ -519,13 +519,13 @@ local keyboard(theme, orientation) =
       }
     ),
 
-    spaceButtonForegroundStyle: utils.makeTextStyle(
+    spaceButtonForegroundStyle: utils.makeSystemImageStyle(
       params={
-        text: '空格',
+        systemImageName: 'space',
         normalColor: color[theme]['按键前景颜色'],
         highlightColor: color[theme]['按键前景颜色'],
         fontSize: fontSize['按键前景文字大小'] - 3,
-        center: center['功能键前景文字偏移'],
+        center: center['功能键前景文字偏移']{ y: 0.6 },
       }
     ),
     spaceRightButton: createButton(
@@ -620,52 +620,52 @@ local keyboard(theme, orientation) =
       ],
     },
 
-    enterButtonForegroundStyle0: utils.makeTextStyle(
+    enterButtonForegroundStyle0: utils.makeSystemImageStyle(
       params={
-        text: '回车',
+        systemImageName: 'return.right',
         normalColor: color[theme]['按键前景颜色'],
         highlightColor: color[theme]['按键前景颜色'],
-        fontSize: fontSize['按键前景文字大小'] - 3,
-        center: center['功能键前景文字偏移'],
+        fontSize: fontSize['按键前景文字大小'],
+        center: center['功能键前景文字偏移']{ y: 0.5 },
       }
     ),
-    enterButtonForegroundStyle6: utils.makeTextStyle(
+    enterButtonForegroundStyle6: utils.makeSystemImageStyle(
       params={
-        text: '搜索',
+        systemImageName: 'magnifyingglass',
         normalColor: color[theme]['长按选中字体颜色'],
         highlightColor: color[theme]['长按非选中字体颜色'],
-        fontSize: fontSize['按键前景文字大小'] - 3,
-        center: center['功能键前景文字偏移'],
-      }
-    ),
-
-    enterButtonForegroundStyle7: utils.makeTextStyle(
-      params={
-        text: '发送',
-        normalColor: color[theme]['长按选中字体颜色'],
-        highlightColor: color[theme]['长按非选中字体颜色'],
-        fontSize: fontSize['按键前景文字大小'] - 3,
-        center: center['功能键前景文字偏移'],
+        fontSize: fontSize['按键前景文字大小'],
+        center: center['功能键前景文字偏移']{ y: 0.5 },
       }
     ),
 
-    enterButtonForegroundStyle14: utils.makeTextStyle(
+    enterButtonForegroundStyle7: utils.makeSystemImageStyle(
       params={
-        text: '前往',
+        systemImageName: 'paperplane',
         normalColor: color[theme]['长按选中字体颜色'],
         highlightColor: color[theme]['长按非选中字体颜色'],
-        fontSize: fontSize['按键前景文字大小'] - 3,
-        center: center['功能键前景文字偏移'],
+        fontSize: fontSize['按键前景文字大小'],
+        center: center['功能键前景文字偏移']{ y: 0.5 },
       }
     ),
 
-    enterButtonForegroundStyle9: utils.makeTextStyle(
+    enterButtonForegroundStyle14: utils.makeSystemImageStyle(
       params={
-        text: '完成',
+        systemImageName: 'chevron.forward',
         normalColor: color[theme]['长按选中字体颜色'],
         highlightColor: color[theme]['长按非选中字体颜色'],
-        fontSize: fontSize['按键前景文字大小'] - 3,
-        center: center['功能键前景文字偏移'],
+        fontSize: fontSize['按键前景文字大小'],
+        center: center['功能键前景文字偏移']{ y: 0.5 },
+      }
+    ),
+
+    enterButtonForegroundStyle9: utils.makeSystemImageStyle(
+      params={
+        systemImageName: 'shareplay',
+        normalColor: color[theme]['长按选中字体颜色'],
+        highlightColor: color[theme]['长按非选中字体颜色'],
+        fontSize: fontSize['按键前景文字大小'],
+        center: center['功能键前景文字偏移']{ y: 0.5 },
       }
     ),
 
@@ -675,7 +675,7 @@ local keyboard(theme, orientation) =
         insets: { top: 5, left: 3, bottom: 5, right: 3 },
         normalColor: color[theme]['enter键背景(蓝色)'],
         highlightColor: color[theme]['功能键背景颜色-高亮'],
-        cornerRadius: 7,
+        cornerRadius: others['圆角']['enter键'],
         normalLowerEdgeColor: color[theme]['底边缘颜色-普通'],
         highlightLowerEdgeColor: color[theme]['底边缘颜色-高亮'],
       }
@@ -719,7 +719,7 @@ local keyboard(theme, orientation) =
         insets: { top: 5, left: 3, bottom: 5, right: 3 },
         normalColor: color[theme]['字母键背景颜色-普通'],
         highlightColor: color[theme]['字母键背景颜色-高亮'],
-        cornerRadius: 9,
+        cornerRadius: others['圆角']['字母键'],
         normalLowerEdgeColor: color[theme]['底边缘颜色-普通'],
         highlightLowerEdgeColor: color[theme]['底边缘颜色-高亮'],
       }
@@ -730,7 +730,7 @@ local keyboard(theme, orientation) =
         insets: { top: 5, left: 3, bottom: 6, right: 3 },
         normalColor: color[theme]['功能键背景颜色-普通'],
         highlightColor: color[theme]['功能键背景颜色-高亮'],
-        cornerRadius: 9,
+        cornerRadius: others['圆角']['功能键'],
         normalLowerEdgeColor: color[theme]['底边缘颜色-普通'],
         highlightLowerEdgeColor: color[theme]['底边缘颜色-高亮'],
       }
@@ -739,9 +739,9 @@ local keyboard(theme, orientation) =
       params={
         normalColor: color[theme]['气泡背景颜色'],
         highlightColor: color[theme]['气泡高亮颜色'],
-        cornerRadius: 9,
+        cornerRadius: others['圆角']['气泡'],
         shadowColor: color[theme]['长按背景阴影颜色'],
-        shadowOffset: { x: 0, y: 5 },
+        shadowOffset: { x: 0, y: 2 },
       }
     ),
     ButtonScaleAnimation: animation['26键按键动画'],

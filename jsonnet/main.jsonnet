@@ -1,6 +1,6 @@
 local config = {
   author: 'kp',
-  name: 'iOS26',
+  name: 'iOS26-v1',
   pinyin: {
     iPhone: {
       portrait: 'pinyin_26_portrait',

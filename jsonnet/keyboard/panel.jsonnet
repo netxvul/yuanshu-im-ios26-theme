@@ -2,6 +2,7 @@ local animation = import '../lib/animation.libsonnet';
 local center = import '../lib/center.libsonnet';
 local color = import '../lib/color.libsonnet';
 local fontSize = import '../lib/fontSize.libsonnet';
+local others = import '../lib/others.libsonnet';
 
 // key: 按键名称
 local createButton(key, action, sf_symbol, text, theme) = {
@@ -154,7 +155,7 @@ local keyboard(theme, orientation) =
       insets: { top: 5, left: 3, bottom: 5, right: 3 },
       normalColor: color[theme]['字母键背景颜色-普通'],
       highlightColor: color[theme]['字母键背景颜色-高亮'],
-      cornerRadius: 5,
+      cornerRadius: others['圆角']['面板'],
       normalLowerEdgeColor: color[theme]['底边缘颜色-普通'],
       highlightLowerEdgeColor: color[theme]['底边缘颜色-高亮'],
     },

@@ -46,7 +46,7 @@
     n: { action: { shortcut: '#次选上屏' }, label: { text: '次' }, fontSize: 8 },
     m: { action: { shortcut: '#三选上屏' }, label: { text: '三' }, fontSize: 8 },
     '123': { action: { shortcut: '#RimeSwitcher' } },
-    spaceRight: { action: { character: '。' } },
+    spaceRight: { action: { symbol: '.' } },
     space: { action: { keyboardType: 'alphabetic' } },  // 如果你没加一个中英切换键，最好别改这个
     // "backspace": {"action": { "character": "。" }, "label": {"text": "。"}},
     // "enter": {"action": { "shortcut": "#换行" }, "label": {"text": "。"}},
@@ -109,6 +109,8 @@
       center: { x: 0.5, y: 0.8 },
     },
     '123': { action: { shortcut: '#方案切换' } },
+    spaceRight: { action: { symbol: ',' } },
+
   },
 
   // 中文九键划动
