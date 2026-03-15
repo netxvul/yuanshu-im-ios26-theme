@@ -6,16 +6,16 @@ alphabetic:
   iPhone:
     landscape: "alphabetic_26_landscape"
     portrait: "alphabetic_26_portrait"
-author: "kp"
-name: "iOS26-v1"
+author: "Kun Peh"
+name: "Feature 26"
 numeric:
   iPad:
     floating: "numeric_9_portrait"
     landscape: "numeric_9_landscape"
-    portrait: "numeric_9_portrait"
+    portrait: "iphone_numeric_portrait"
   iPhone:
     landscape: "numeric_9_landscape"
-    portrait: "numeric_9_portrait"
+    portrait: "iphone_numeric_portrait"
 panel:
   iPhone:
     landscape: "panel_landscape"
@@ -32,7 +32,7 @@ symbolic:
   iPad:
     floating: "symbolic_portrait"
     landscape: "numeric_9_landscape"
-    portrait: "symbolic_portrait"
+    portrait: "iphone_symbolic_portrait"
   iPhone:
-    landscape: "numeric_9_landscape"
-    portrait: "symbolic_portrait"
+    landscape: "iphone_symbolic_portrait"
+    portrait: "iphone_symbolic_portrait"

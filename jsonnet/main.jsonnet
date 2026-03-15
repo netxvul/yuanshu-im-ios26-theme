@@ -1,6 +1,6 @@
 local config = {
-  author: 'kp',
-  name: 'iOS26-v1',
+  author: 'Kun Peh',
+  name: 'Feature 26',
   pinyin: {
     iPhone: {
       portrait: 'pinyin_26_portrait',
@@ -25,22 +25,22 @@ local config = {
   },
   numeric: {
     iPhone: {
-      portrait: 'numeric_9_portrait',
+      portrait: 'iphone_numeric_portrait',
       landscape: 'numeric_9_landscape',
     },
     iPad: {
-      portrait: 'numeric_9_portrait',
+      portrait: 'iphone_numeric_portrait',
       landscape: 'numeric_9_landscape',
       floating: 'numeric_9_portrait',
     },
   },
   symbolic: {
     iPhone: {
-      portrait: 'symbolic_portrait',
-      landscape: 'numeric_9_landscape',
+      portrait: 'iphone_symbolic_portrait',
+      landscape: 'iphone_symbolic_portrait',
     },
     iPad: {
-      portrait: 'symbolic_portrait',
+      portrait: 'iphone_symbolic_portrait',
       landscape: 'numeric_9_landscape',
       floating: 'symbolic_portrait',
     },
@@ -64,6 +64,8 @@ local alphabetic = import 'keyboard/alphabetic_26.jsonnet';
 local numericPortrait = import 'keyboard/numeric_9_portrait.jsonnet';
 local numericLandscape = import 'keyboard/numeric_9_landscape.jsonnet';
 local symbolic = import 'keyboard/symbolic_portrait.jsonnet';
+local iphoneNumeric = import 'keyboard/iphone_numeric.jsonnet';
+local iphoneSymbolic = import 'keyboard/iphone_symbolic.jsonnet';
 // local emoji = import 'keyboard/emoji_portrait.jsonnet';
 local panel = import 'keyboard/panel.jsonnet';
 
@@ -85,9 +87,21 @@ local darkNumericPortrait = numericPortrait.new('dark');
 local lightNumericLandscape = numericLandscape.new('light');
 local darkNumericLandscape = numericLandscape.new('dark');
 
-// 符号
+// 符号（分类符号浏览器，保留备用）
 local lightSymbolicPortrait = symbolic.new('light');
 local darkSymbolicPortrait = symbolic.new('dark');
+
+// iPhoneNumeric 风格数字符号键盘（绑定到 123Button / numericButton）
+local lightIphoneNumericPortrait = iphoneNumeric.new('light', 'portrait');
+local darkIphoneNumericPortrait = iphoneNumeric.new('dark', 'portrait');
+local lightIphoneNumericLandscape = iphoneNumeric.new('light', 'landscape');
+local darkIphoneNumericLandscape = iphoneNumeric.new('dark', 'landscape');
+
+// iPhoneSymbolic 风格符号键盘（绑定到 symbolButton）
+local lightIphoneSymbolicPortrait = iphoneSymbolic.new('light', 'portrait');
+local darkIphoneSymbolicPortrait = iphoneSymbolic.new('dark', 'portrait');
+local lightIphoneSymbolicLandscape = iphoneSymbolic.new('light', 'landscape');
+local darkIphoneSymbolicLandscape = iphoneSymbolic.new('dark', 'landscape');
 
 // emoji
 // local lightEmojiPortrait = emoji.new('light');
@@ -119,9 +133,21 @@ local darkPanelLandscape = panel.new('dark', 'landscape');
   'light/numeric_9_landscape.yaml': std.toString(lightNumericLandscape),
   'dark/numeric_9_landscape.yaml': std.toString(darkNumericLandscape),
 
-  // 符号
+  // 符号（分类浏览器，保留备用）
   'light/symbolic_portrait.yaml': std.toString(lightSymbolicPortrait),
   'dark/symbolic_portrait.yaml': std.toString(darkSymbolicPortrait),
+
+  // iPhoneNumeric 风格数字符号键盘（123Button / numericButton 绑定目标）
+  'light/iphone_numeric_portrait.yaml': std.toString(lightIphoneNumericPortrait),
+  'dark/iphone_numeric_portrait.yaml': std.toString(darkIphoneNumericPortrait),
+  'light/iphone_numeric_landscape.yaml': std.toString(lightIphoneNumericLandscape),
+  'dark/iphone_numeric_landscape.yaml': std.toString(darkIphoneNumericLandscape),
+
+  // iPhoneSymbolic 风格符号键盘（symbolButton 绑定目标）
+  'light/iphone_symbolic_portrait.yaml': std.toString(lightIphoneSymbolicPortrait),
+  'dark/iphone_symbolic_portrait.yaml': std.toString(darkIphoneSymbolicPortrait),
+  'light/iphone_symbolic_landscape.yaml': std.toString(lightIphoneSymbolicLandscape),
+  'dark/iphone_symbolic_landscape.yaml': std.toString(darkIphoneSymbolicLandscape),
 
   // emoji
   // 'light/emoji_portrait.yaml': std.toString(lightEmojiPortrait),
