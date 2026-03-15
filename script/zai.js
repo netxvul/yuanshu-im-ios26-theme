@@ -1,3 +1,7 @@
+// ⚠️ 请将下方 API_KEY 替换为你自己的密钥，切勿将真实密钥提交到公开仓库
+// 获取方式: https://open.bigmodel.cn/
+const API_KEY = "YOUR_API_KEY_HERE";
+
 const BASE_URL = "https://api.z.ai/api/paas/v4/chat/completions";
 const DEFAULT_MODEL = "GLM-4.7";
 const DEFAULT_TEMPERATURE = 0.8;
@@ -36,7 +40,7 @@ async function bigModelTranslate(text) {
       method: "POST",
       header: {
         "Content-Type": "application/json",
-        Authorization: `Bearer 6331746c51a045868869aa992d0560af.m4m7DwuCYv8DH4ET`,
+        Authorization: `Bearer ${API_KEY}`,
       },
       body: {
         messages,

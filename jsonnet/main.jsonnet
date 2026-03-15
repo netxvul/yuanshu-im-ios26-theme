@@ -29,7 +29,7 @@ local config = {
       landscape: 'numeric_9_landscape',
     },
     iPad: {
-      portrait: 'iphone_numeric_portrait',
+      portrait: 'numeric_9_portrait',
       landscape: 'numeric_9_landscape',
       floating: 'numeric_9_portrait',
     },
@@ -37,24 +37,46 @@ local config = {
   symbolic: {
     iPhone: {
       portrait: 'iphone_symbolic_portrait',
-      landscape: 'iphone_symbolic_portrait',
+      landscape: 'numeric_9_landscape',
     },
     iPad: {
-      portrait: 'iphone_symbolic_portrait',
+      portrait: 'symbolic_portrait',
       landscape: 'numeric_9_landscape',
       floating: 'symbolic_portrait',
     },
   },
-  // emoji: {
-  //   iPhone: {
-  //     portrait: 'emoji_portrait',
-  //     landscape: 'emoji_landscape',
-  //   },
-  // },
+  emoji: {
+     iPhone: {
+       portrait: 'emoji_portrait',
+       landscape: 'emoji_landscape',
+     },
+  },
   panel: {
     iPhone: {
       portrait: 'panel_portrait',
       landscape: 'panel_landscape',
+    },
+  },
+  numeric_9: {
+     iPhone: {
+      portrait: 'numeric_9_portrait',
+      landscape: 'numeric_9_landscape',
+    },
+    iPad: {
+      portrait: 'numeric_9_portrait',
+      landscape: 'numeric_9_landscape',
+      floating: 'numeric_9_portrait',
+    },
+  },
+  symbolic_all: {
+    iPhone: {
+      portrait: 'symbolic_portrait',
+      landscape: 'numeric_9_landscape',
+    },
+    iPad: {
+      portrait: 'symbolic_portrait',
+      landscape: 'numeric_9_landscape',
+      floating: 'symbolic_portrait',
     },
   },
 };

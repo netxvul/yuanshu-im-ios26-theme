@@ -7,15 +7,27 @@ alphabetic:
     landscape: "alphabetic_26_landscape"
     portrait: "alphabetic_26_portrait"
 author: "Kun Peh"
+emoji:
+  iPhone:
+    landscape: "emoji_landscape"
+    portrait: "emoji_portrait"
 name: "Feature 26"
 numeric:
   iPad:
     floating: "numeric_9_portrait"
     landscape: "numeric_9_landscape"
-    portrait: "iphone_numeric_portrait"
+    portrait: "numeric_9_portrait"
   iPhone:
     landscape: "numeric_9_landscape"
     portrait: "iphone_numeric_portrait"
+numeric_9:
+  iPad:
+    floating: "numeric_9_portrait"
+    landscape: "numeric_9_landscape"
+    portrait: "numeric_9_portrait"
+  iPhone:
+    landscape: "numeric_9_landscape"
+    portrait: "numeric_9_portrait"
 panel:
   iPhone:
     landscape: "panel_landscape"
@@ -32,7 +44,15 @@ symbolic:
   iPad:
     floating: "symbolic_portrait"
     landscape: "numeric_9_landscape"
-    portrait: "iphone_symbolic_portrait"
+    portrait: "symbolic_portrait"
   iPhone:
-    landscape: "iphone_symbolic_portrait"
+    landscape: "numeric_9_landscape"
     portrait: "iphone_symbolic_portrait"
+symbolic_all:
+  iPad:
+    floating: "symbolic_portrait"
+    landscape: "numeric_9_landscape"
+    portrait: "symbolic_portrait"
+  iPhone:
+    landscape: "numeric_9_landscape"
+    portrait: "symbolic_portrait"

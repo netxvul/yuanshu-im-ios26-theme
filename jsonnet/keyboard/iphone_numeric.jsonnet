@@ -96,6 +96,7 @@ local keyboard(theme, orientation) =
             { Cell: 'pinyinButton' },
             { Cell: 'symbolButton' },
             { Cell: 'spaceButton' },
+            { Cell: 'spaceRightButton' },
             { Cell: 'enterButton' },
           ],
         },
@@ -529,7 +530,8 @@ local keyboard(theme, orientation) =
       params={
         key: 'symbol',
         size: ButtonSize['symbol键size'],
-        action: { keyboardType: 'numeric' },
+        action: { keyboardType: 'numeric_9' },
+        foregroundStyle: 'symbolButtonForegroundStyle',
         isLetter: false,
       }
     ),
@@ -562,17 +564,18 @@ local keyboard(theme, orientation) =
     ),
     spaceRightButton: createButton(
       params={
-        key: 'symbolic',
-        size: std.get(ButtonSize, 'shift键size'),
+        key: 'symbol',
+        size: ButtonSize['symbol键size'],
         bounds: { width: '151/168.75', alignment: 'left' },
-        action: { keyboardType: 'symbolic' },
+        action: { keyboardType: 'symbolic_all' },
+        foregroundStyle: 'spaceRightButtonForegroundStyle',
         isChar: false,
       }
     ),
 
     spaceRightButtonForegroundStyle: utils.makeSystemImageStyle(
       params={
-        systemImageName: 'apple.writing.tools',
+        systemImageName: 'iphone.dock.motorized.viewfinder',
         normalColor: color[theme]['按键前景颜色'],
         highlightColor: color[theme]['按键前景颜色'],
         fontSize: fontSize['按键前景文字大小'] + 2,
