@@ -97,7 +97,7 @@ local pinyinSpecific(theme, orientation) =
         key: 'spaceRight',
         size: ButtonSize['spaceRight键size'],
         action: { character: '.' },
-        backgroundStyle: 'alphabeticBackgroundStyle',
+        backgroundStyle: 'systemButtonBackgroundStyle',
         foregroundStyle: [
           'spaceRightButtonForegroundStyle',
           'spaceRightButtonForegroundStyle2',

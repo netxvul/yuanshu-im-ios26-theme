@@ -6,6 +6,7 @@
 local animation = import '../lib/animation.libsonnet';
 local center = import '../lib/center.libsonnet';
 local color = import '../lib/color.libsonnet';
+local enterKey = import '../lib/enterKey.libsonnet';
 local fontSize = import '../lib/fontSize.libsonnet';
 local keyboardLayout = import '../lib/keyboardLayout.libsonnet';
 local others = import '../lib/others.libsonnet';
@@ -31,9 +32,8 @@ local createButton(params={}) =
   });
 
 local keyboard(theme, orientation) =
+  local ButtonSize = keyboardLayout.getButtonSize(theme, orientation);
   {
-    local ButtonSize = keyboardLayout.getButtonSize(theme, orientation),
-
     [if std.objectHas(others, '中文键盘方案') then 'rimeSchema']: others['中文键盘方案'],
     preeditHeight: others[if orientation == 'portrait' then '竖屏' else '横屏']['preedit高度'],
     toolbarHeight: others[if orientation == 'portrait' then '竖屏' else '横屏']['toolbar高度'],
@@ -558,26 +558,6 @@ local keyboard(theme, orientation) =
       }
     ),
 
-    // 回车键
-    enterButton: createButton(
-      params={
-        key: 'enter',
-        size: std.get(ButtonSize, 'enter键size'),
-        action: 'enter',
-        isChar: false,
-        backgroundStyle: 'enterButtonBackgroundStyle',
-        foregroundStyle: 'enterButtonForegroundStyle',
-      }
-    ),
-    enterButtonForegroundStyle: utils.makeSystemImageStyle(
-      params={
-        systemImageName: 'arrow.turn.down.left',
-        normalColor: color[theme]['长按选中字体颜色'],
-        highlightColor: color[theme]['长按非选中字体颜色'],
-        fontSize: fontSize['按键前景文字大小'],
-      }
-    ),
-
     // ==================== 背景样式 ====================
 
     // 字符键背景（符号、标点）
@@ -604,21 +584,13 @@ local keyboard(theme, orientation) =
       }
     ),
 
-    // 回车键背景（蓝色）
-    enterButtonBackgroundStyle: utils.makeGeometryStyle(
-      params={
-        insets: { top: 5, left: 3, bottom: 5, right: 3 },
-        normalColor: color[theme]['enter键背景(蓝色)'],
-        highlightColor: color[theme]['功能键背景颜色-高亮'],
-        cornerRadius: others['圆角']['enter键'],
-        normalLowerEdgeColor: color[theme]['底边缘颜色-普通'],
-        highlightLowerEdgeColor: color[theme]['底边缘颜色-高亮'],
-      }
-    ),
-
     // 按键动画
     ButtonScaleAnimation: animation['26键按键动画'],
-  };
+  }
+  + enterKey.genEnterSection(theme, createButton, 'sharedDynamic', {
+      size: std.get(ButtonSize, 'enter键size'),
+      isChar: false,
+    }, ButtonSize);
 
 {
   new(theme, orientation='portrait'):

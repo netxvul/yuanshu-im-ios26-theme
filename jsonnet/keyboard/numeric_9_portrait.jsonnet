@@ -1,6 +1,7 @@
 local animation = import '../lib/animation.libsonnet';
 local collectionData = import '../lib/collectionData.libsonnet';
 local color = import '../lib/color.libsonnet';
+local enterKey = import '../lib/enterKey.libsonnet';
 local fontSize = import '../lib/fontSize.libsonnet';
 local _hintSymbolsData = import '../lib/hintSymbolsData.libsonnet';
 local others = import '../lib/others.libsonnet';
@@ -312,23 +313,6 @@ local keyboard(theme) =
       }
     ),
 
-    enterButton: createButton(
-      params={
-        key: 'enter',
-        action: 'enter',
-        isNumber: false,
-      }
-    ),
-
-    enterButtonForegroundStyle: utils.makeSystemImageStyle(
-      params={
-        systemImageName: 'arrow.turn.down.left',
-        normalColor: color[theme]['enter键背景(蓝色)'],
-        highlightColor: color[theme]['功能键背景颜色-高亮'],
-        fontSize: fontSize['按键前景文字大小'],
-      }
-    ),
-
     numberButtonBackgroundStyle: utils.makeGeometryStyle(
       params={
         insets: { top: 4, left: 3, bottom: 4, right: 3 },
@@ -357,7 +341,10 @@ local keyboard(theme) =
 
     // 左侧符号列表数据来源
     symbols: collectionData.numericSymbols,
-  };
+  }
+  + enterKey.genEnterSection(theme, createButton, 'sharedDynamic', {
+      isNumber: false,
+    }, null);
 
 {
   new(theme):
