@@ -322,7 +322,7 @@ local keyboard(theme) =
 
     enterButtonForegroundStyle: utils.makeSystemImageStyle(
       params={
-        systemImageName: 'arrow.turn.left.down',
+        systemImageName: 'arrow.turn.down.left',
         normalColor: color[theme]['enter键背景(蓝色)'],
         highlightColor: color[theme]['功能键背景颜色-高亮'],
         fontSize: fontSize['按键前景文字大小'],

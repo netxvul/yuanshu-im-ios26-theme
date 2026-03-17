@@ -158,12 +158,32 @@ local genEnterSection(theme, ButtonSize, createButton) = {
       {
         styleName: 'enterButtonForegroundStyle0',
         conditionKey: '$returnKeyType',
-        conditionValue: [0, 2, 3, 5, 8, 10, 11],
+        conditionValue: [0],
       },
       {
-        styleName: 'enterButtonForegroundStyle14',
+        styleName: 'enterButtonForegroundStyle1',
         conditionKey: '$returnKeyType',
-        conditionValue: [1, 4],
+        conditionValue: [1],
+      },
+      {
+        styleName: 'enterButtonForegroundStyle2',
+        conditionKey: '$returnKeyType',
+        conditionValue: [2],
+      },
+      {
+        styleName: 'enterButtonForegroundStyle3',
+        conditionKey: '$returnKeyType',
+        conditionValue: [3],
+      },
+      {
+        styleName: 'enterButtonForegroundStyle4',
+        conditionKey: '$returnKeyType',
+        conditionValue: [4],
+      },
+      {
+        styleName: 'enterButtonForegroundStyle5',
+        conditionKey: '$returnKeyType',
+        conditionValue: [5],
       },
       {
         styleName: 'enterButtonForegroundStyle6',
@@ -180,20 +200,82 @@ local genEnterSection(theme, ButtonSize, createButton) = {
         conditionKey: '$returnKeyType',
         conditionValue: [9],
       },
+      {
+        styleName: 'enterButtonForegroundStyle10',
+        conditionKey: '$returnKeyType',
+        conditionValue: [10],
+      },
+      {
+        styleName: 'enterButtonForegroundStyle11',
+        conditionKey: '$returnKeyType',
+        conditionValue: [11],
+      },
     ],
     // 按键通知
     notification: [
       'garyReturnKeyTypeNotification',
-      'blueReturnKeyTypeNotification14',
+      'blueReturnKeyTypeNotification1',
+      'garyReturnKeyTypeNotification2',
+      'garyReturnKeyTypeNotification3',
+      'blueReturnKeyTypeNotification4',
+      'garyReturnKeyTypeNotification5',
       'blueReturnKeyTypeNotification6',
       'blueReturnKeyTypeNotification7',
+      'garyReturnKeyTypeNotification8',
       'blueReturnKeyTypeNotification9',
+      'garyReturnKeyTypeNotification10',
+      'garyReturnKeyTypeNotification11',
     ],
   },
 
   enterButtonForegroundStyle0: utils.makeSystemImageStyle(
     params={
-      systemImageName: 'return.right',
+      systemImageName: 'arrow.turn.down.left',
+      normalColor: color[theme]['按键前景颜色'],
+      highlightColor: color[theme]['按键前景颜色'],
+      fontSize: fontSize['按键前景文字大小'],
+      center: center['功能键前景文字偏移'] { y: 0.5 },
+    }
+  ),
+  enterButtonForegroundStyle1: utils.makeSystemImageStyle(
+    params={
+      systemImageName: 'arrow.right.circle.fill',
+      normalColor: color[theme]['长按选中字体颜色'],
+      highlightColor: color[theme]['长按非选中字体颜色'],
+      fontSize: fontSize['按键前景文字大小'],
+      center: center['功能键前景文字偏移'] { y: 0.5 },
+    }
+  ),
+  enterButtonForegroundStyle2: utils.makeSystemImageStyle(
+    params={
+      systemImageName: 'magnifyingglass',
+      normalColor: color[theme]['按键前景颜色'],
+      highlightColor: color[theme]['按键前景颜色'],
+      fontSize: fontSize['按键前景文字大小'],
+      center: center['功能键前景文字偏移'] { y: 0.5 },
+    }
+  ),
+  enterButtonForegroundStyle3: utils.makeSystemImageStyle(
+    params={
+      systemImageName: 'person.badge.plus',
+      normalColor: color[theme]['按键前景颜色'],
+      highlightColor: color[theme]['按键前景颜色'],
+      fontSize: fontSize['按键前景文字大小'],
+      center: center['功能键前景文字偏移'] { y: 0.5 },
+    }
+  ),
+  enterButtonForegroundStyle4: utils.makeSystemImageStyle(
+    params={
+      systemImageName: 'chevron.forward',
+      normalColor: color[theme]['长按选中字体颜色'],
+      highlightColor: color[theme]['长按非选中字体颜色'],
+      fontSize: fontSize['按键前景文字大小'],
+      center: center['功能键前景文字偏移'] { y: 0.5 },
+    }
+  ),
+  enterButtonForegroundStyle5: utils.makeSystemImageStyle(
+    params={
+      systemImageName: 'map',
       normalColor: color[theme]['按键前景颜色'],
       highlightColor: color[theme]['按键前景颜色'],
       fontSize: fontSize['按键前景文字大小'],
@@ -212,7 +294,7 @@ local genEnterSection(theme, ButtonSize, createButton) = {
 
   enterButtonForegroundStyle7: utils.makeSystemImageStyle(
     params={
-      systemImageName: 'paperplane',
+      systemImageName: 'paperplane.fill',
       normalColor: color[theme]['长按选中字体颜色'],
       highlightColor: color[theme]['长按非选中字体颜色'],
       fontSize: fontSize['按键前景文字大小'],
@@ -220,11 +302,11 @@ local genEnterSection(theme, ButtonSize, createButton) = {
     }
   ),
 
-  enterButtonForegroundStyle14: utils.makeSystemImageStyle(
+  enterButtonForegroundStyle8: utils.makeSystemImageStyle(
     params={
-      systemImageName: 'chevron.forward',
-      normalColor: color[theme]['长按选中字体颜色'],
-      highlightColor: color[theme]['长按非选中字体颜色'],
+      systemImageName: 'magnifyingglass',
+      normalColor: color[theme]['按键前景颜色'],
+      highlightColor: color[theme]['按键前景颜色'],
       fontSize: fontSize['按键前景文字大小'],
       center: center['功能键前景文字偏移'] { y: 0.5 },
     }
@@ -232,7 +314,27 @@ local genEnterSection(theme, ButtonSize, createButton) = {
 
   enterButtonForegroundStyle9: utils.makeSystemImageStyle(
     params={
-      systemImageName: 'shareplay',
+      systemImageName: 'checkmark',
+      normalColor: color[theme]['长按选中字体颜色'],
+      highlightColor: color[theme]['长按非选中字体颜色'],
+      fontSize: fontSize['按键前景文字大小'],
+      center: center['功能键前景文字偏移'] { y: 0.5 },
+    }
+  ),
+
+  enterButtonForegroundStyle10: utils.makeSystemImageStyle(
+    params={
+      systemImageName: 'phone.fill',
+      normalColor: color[theme]['按键前景颜色'],
+      highlightColor: color[theme]['按键前景颜色'],
+      fontSize: fontSize['按键前景文字大小'],
+      center: center['功能键前景文字偏移'] { y: 0.5 },
+    }
+  ),
+
+  enterButtonForegroundStyle11: utils.makeSystemImageStyle(
+    params={
+      systemImageName: 'arrow.right',
       normalColor: color[theme]['长按选中字体颜色'],
       highlightColor: color[theme]['长按非选中字体颜色'],
       fontSize: fontSize['按键前景文字大小'],
@@ -255,17 +357,41 @@ local genEnterSection(theme, ButtonSize, createButton) = {
   // 灰色回车通知（前景 0）
   garyReturnKeyTypeNotification: {
     notificationType: 'returnKeyType',
-    returnKeyType: [0, 2, 3, 5, 8, 10, 11],
+    returnKeyType: [0],
     backgroundStyle: 'systemButtonBackgroundStyle',
     foregroundStyle: 'enterButtonForegroundStyle0',
   },
 
   // 蓝色回车通知（按前景细分）
-  blueReturnKeyTypeNotification14: {
+  blueReturnKeyTypeNotification1: {
     notificationType: 'returnKeyType',
-    returnKeyType: [1, 4],
+    returnKeyType: [1],
     backgroundStyle: 'enterButtonBlueBackgroundStyle',
-    foregroundStyle: 'enterButtonForegroundStyle14',
+    foregroundStyle: 'enterButtonForegroundStyle1',
+  },
+  garyReturnKeyTypeNotification2: {
+    notificationType: 'returnKeyType',
+    returnKeyType: [2],
+    backgroundStyle: 'systemButtonBackgroundStyle',
+    foregroundStyle: 'enterButtonForegroundStyle2',
+  },
+  garyReturnKeyTypeNotification3: {
+    notificationType: 'returnKeyType',
+    returnKeyType: [3],
+    backgroundStyle: 'systemButtonBackgroundStyle',
+    foregroundStyle: 'enterButtonForegroundStyle3',
+  },
+  blueReturnKeyTypeNotification4: {
+    notificationType: 'returnKeyType',
+    returnKeyType: [4],
+    backgroundStyle: 'enterButtonBlueBackgroundStyle',
+    foregroundStyle: 'enterButtonForegroundStyle4',
+  },
+  garyReturnKeyTypeNotification5: {
+    notificationType: 'returnKeyType',
+    returnKeyType: [5],
+    backgroundStyle: 'systemButtonBackgroundStyle',
+    foregroundStyle: 'enterButtonForegroundStyle5',
   },
   blueReturnKeyTypeNotification6: {
     notificationType: 'returnKeyType',
@@ -279,11 +405,29 @@ local genEnterSection(theme, ButtonSize, createButton) = {
     backgroundStyle: 'enterButtonBlueBackgroundStyle',
     foregroundStyle: 'enterButtonForegroundStyle7',
   },
+  garyReturnKeyTypeNotification8: {
+    notificationType: 'returnKeyType',
+    returnKeyType: [8],
+    backgroundStyle: 'systemButtonBackgroundStyle',
+    foregroundStyle: 'enterButtonForegroundStyle8',
+  },
   blueReturnKeyTypeNotification9: {
     notificationType: 'returnKeyType',
     returnKeyType: [9],
     backgroundStyle: 'enterButtonBlueBackgroundStyle',
     foregroundStyle: 'enterButtonForegroundStyle9',
+  },
+  garyReturnKeyTypeNotification10: {
+    notificationType: 'returnKeyType',
+    returnKeyType: [10],
+    backgroundStyle: 'systemButtonBackgroundStyle',
+    foregroundStyle: 'enterButtonForegroundStyle10',
+  },
+  garyReturnKeyTypeNotification11: {
+    notificationType: 'returnKeyType',
+    returnKeyType: [11],
+    backgroundStyle: 'systemButtonBackgroundStyle',
+    foregroundStyle: 'enterButtonForegroundStyle11',
   },
 };
 

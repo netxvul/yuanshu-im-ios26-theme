@@ -571,7 +571,7 @@ local keyboard(theme, orientation) =
     ),
     enterButtonForegroundStyle: utils.makeSystemImageStyle(
       params={
-        systemImageName: 'return.right',
+        systemImageName: 'arrow.turn.down.left',
         normalColor: color[theme]['长按选中字体颜色'],
         highlightColor: color[theme]['长按非选中字体颜色'],
         fontSize: fontSize['按键前景文字大小'],
