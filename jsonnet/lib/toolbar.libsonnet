@@ -6,22 +6,24 @@ local utils = import 'utils.libsonnet';
 
 local getToolBar(theme) = {
   preeditStyle: {
-    insets: {
-      left: 8,
-      top: 2,
-    },
+  insets: {
+    left: 8,
+    top: 2,
+    right: 8,
+    bottom: 2,
+  },
     backgroundStyle: 'preeditBackgroundStyle',
     foregroundStyle: 'preeditForegroundStyle',
   },
   preeditBackgroundStyle: {
     buttonStyleType: 'geometry',
-    normalColor: color[theme]['键盘背景颜色'],
+    normalColor: '#ff000022',
   },
-  preeditForegroundStyle: {
-    textColor: color[theme]['候选字体未选中字体颜色'],
+    preeditForegroundStyle: {
+    textColor: '#ff0000',
     fontSize: fontSize['preedit区字体大小'],
     fontWeight: 0,
-  },
+    },
 
   // 工具栏
   toolbarStyle: {

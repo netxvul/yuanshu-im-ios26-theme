@@ -118,6 +118,12 @@
         { action: { symbol: '.org' }, label: { text: 'org' }, fontSize: 18 },
       ],
     },
+    k: {
+      selectedIndex: 0,
+      list: [
+        { action: { keyboardType: 'linux_terminal' }, label: { systemImageName: 'keyboard' }, fontSize: 18 }
+      ],
+    },
     d: {
       selectedIndex: 1,
       list: [

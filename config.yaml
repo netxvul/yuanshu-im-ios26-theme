@@ -11,6 +11,14 @@ emoji:
   iPhone:
     landscape: "emoji_landscape"
     portrait: "emoji_portrait"
+linux_terminal:
+  iPad:
+    floating: "linux_terminal_portrait"
+    landscape: "linux_terminal_landscape"
+    portrait: "linux_terminal_landscape"
+  iPhone:
+    landscape: "linux_terminal_landscape"
+    portrait: "linux_terminal_portrait"
 name: "Feature 26"
 numeric:
   iPad:

@@ -79,6 +79,17 @@ local config = {
       floating: 'symbolic_portrait',
     },
   },
+  linux_terminal: {
+    iPhone: {
+      portrait: 'linux_terminal_portrait',
+      landscape: 'linux_terminal_landscape',
+    },
+    iPad: {
+      portrait: 'linux_terminal_landscape',
+      landscape: 'linux_terminal_landscape',
+      floating: 'linux_terminal_portrait',
+    },
+  },
 };
 
 local pinyin = import 'keyboard/pinyin_26.jsonnet';
@@ -88,6 +99,7 @@ local numericLandscape = import 'keyboard/numeric_9_landscape.jsonnet';
 local symbolic = import 'keyboard/symbolic_portrait.jsonnet';
 local iphoneNumeric = import 'keyboard/iphone_numeric.jsonnet';
 local iphoneSymbolic = import 'keyboard/iphone_symbolic.jsonnet';
+local linuxTerminal = import 'keyboard/linux_terminal.jsonnet';
 // local emoji = import 'keyboard/emoji_portrait.jsonnet';
 local panel = import 'keyboard/panel.jsonnet';
 
@@ -124,6 +136,12 @@ local lightIphoneSymbolicPortrait = iphoneSymbolic.new('light', 'portrait');
 local darkIphoneSymbolicPortrait = iphoneSymbolic.new('dark', 'portrait');
 local lightIphoneSymbolicLandscape = iphoneSymbolic.new('light', 'landscape');
 local darkIphoneSymbolicLandscape = iphoneSymbolic.new('dark', 'landscape');
+
+// Linux terminal
+local lightLinuxTerminalPortrait = linuxTerminal.new('light', 'portrait');
+local darkLinuxTerminalPortrait = linuxTerminal.new('dark', 'portrait');
+local lightLinuxTerminalLandscape = linuxTerminal.new('light', 'landscape');
+local darkLinuxTerminalLandscape = linuxTerminal.new('dark', 'landscape');
 
 // emoji
 // local lightEmojiPortrait = emoji.new('light');
@@ -170,6 +188,12 @@ local darkPanelLandscape = panel.new('dark', 'landscape');
   'dark/iphone_symbolic_portrait.yaml': std.toString(darkIphoneSymbolicPortrait),
   'light/iphone_symbolic_landscape.yaml': std.toString(lightIphoneSymbolicLandscape),
   'dark/iphone_symbolic_landscape.yaml': std.toString(darkIphoneSymbolicLandscape),
+
+  // Linux terminal
+  'light/linux_terminal_portrait.yaml': std.toString(lightLinuxTerminalPortrait),
+  'dark/linux_terminal_portrait.yaml': std.toString(darkLinuxTerminalPortrait),
+  'light/linux_terminal_landscape.yaml': std.toString(lightLinuxTerminalLandscape),
+  'dark/linux_terminal_landscape.yaml': std.toString(darkLinuxTerminalLandscape),
 
   // emoji
   // 'light/emoji_portrait.yaml': std.toString(lightEmojiPortrait),
