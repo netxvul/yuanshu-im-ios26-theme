@@ -5,7 +5,7 @@ local fontSize = import '../lib/fontSize.libsonnet';
 local others = import '../lib/others.libsonnet';
 
 // key: 按键名称
-local createButton(key, action, sf_symbol, text, theme) = {
+local createButton(key, action, icon_file, text, theme) = {
   [key + 'Button']: {
     size: {
       height: '1/4',
@@ -18,11 +18,16 @@ local createButton(key, action, sf_symbol, text, theme) = {
     action: action,
   },
   [key + 'ButtonForegroundStyle']: {
-    buttonStyleType: 'systemImage',
-    systemImageName: sf_symbol,
-    fontSize: fontSize['panel按键前景sf符号大小'],
-    normalColor: color[theme]['按键前景颜色'],
-    highlightColor: color[theme]['按键前景颜色'],
+    buttonStyleType: 'fileImage',
+    contentMode: 'scaleAspectFit',
+    normalImage: {
+      file: icon_file,
+      image: 'IMG1',
+    },
+    highlightImage: {
+      file: icon_file,
+      image: 'IMG1',
+    },
     center: center['panel键盘按键sf符号前景偏移'],
   },
   [key + 'ButtonForegroundStyle2']: {
@@ -41,7 +46,7 @@ local keyboard(theme, orientation) =
   createButton(
     'Hamster',
     { openURL: 'hamster3://com.ihsiao.apps.hamster3/' },
-    'keyboard',
+    'panel_toolbar_list_start',
     '元书',
     theme
   ) +
@@ -49,49 +54,49 @@ local keyboard(theme, orientation) =
   createButton(
     'Switcher',
     { shortcut: '#RimeSwitcher' },
-    'switch.2',
+    'panel_settings_2',
     'Switcher',
     theme
   ) +
   createButton(
     'Phrase',
     { shortcut: '#showPhraseView' },
-    'clipboard',
+    'panel_book_text',
     '常用语',
     theme
   ) +
   createButton(
     'HamsterSkin',
     { openURL: 'hamster3://com.ihsiao.apps.hamster3/keyboardSkins' },
-    'tshirt',
+    'panel_swatch_book',
     '皮肤设置',
     theme
   ) +
   createButton(
     'Upload',
     { openURL: 'hamster3://com.ihsiao.apps.hamster3/wifi' },
-    'square.and.arrow.up',
+    'panel_folder_up',
     '方案上传',
     theme
   ) +
   createButton(
     'Deploy',
     { openURL: 'hamster3://com.ihsiao.apps.hamster3/rime?action=deploy' },
-    'command.circle',
+    'panel_tv_minimal_play',
     '部署',
     theme
   ) +
   createButton(
     'Finder',
     { openURL: 'hamster3://com.ihsiao.apps.hamster3/finder' },
-    'folder',
+    'panel_folder_code',
     '文件',
     theme
   ) +
   createButton(
     'toogleEmbedded',
     { shortcut: '#toggleEmbeddedInputMode' },
-    'square.and.pencil',
+    'panel_ethernet_port',
     '内嵌开关',
     theme
   ) +

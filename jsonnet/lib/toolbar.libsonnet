@@ -4,6 +4,20 @@ local fontSize = import 'fontSize.libsonnet';
 local others = import 'others.libsonnet';
 local utils = import 'utils.libsonnet';
 
+local makeToolbarLucideStyle(file) = {
+  buttonStyleType: 'fileImage',
+  contentMode: 'scaleAspectFit',
+  normalImage: {
+    file: file,
+    image: 'IMG1',
+  },
+  highlightImage: {
+    file: file,
+    image: 'IMG1',
+  },
+  center: center['toolbar按键sf符号偏移'],
+};
+
 local getToolBar(theme) = {
   preeditStyle: {
   insets: {
@@ -37,10 +51,10 @@ local getToolBar(theme) = {
         subviews: [
           // 工具栏会和其他键盘合并在一起，这里按键名称添加前缀以防冲突
           { Cell: 'toolbarMenuButton' },
-          { Cell: 'toolbarTranslateButton' },
-          { Cell: 'toolbarEmojiButton' },
-          { Cell: 'toolbarPhraseeButton' },
           { Cell: 'toolbarPasteboardButton' },
+          { Cell: 'toolbarPhraseeButton' },
+          { Cell: 'toolbarEmojiButton' },
+          { Cell: 'toolbarTranslateButton' },
           { Cell: 'toolbarScriptButton' },
           { Cell: 'toolbarSimp2tranButton' },
           { Cell: 'toolbarCloseButton' },
@@ -73,14 +87,7 @@ local getToolBar(theme) = {
     },
   },
 
-  toolbarMenuButtonForegroundStyle: {
-    buttonStyleType: 'systemImage',
-    systemImageName: 'square.grid.2x2',
-    normalColor: color[theme]['toolbar按键颜色'],
-    highlightColor: color[theme]['toolbar按键颜色'],
-    fontSize: fontSize['toolbar按键前景sf符号大小'],
-    center: center['toolbar按键sf符号偏移'],
-  },
+  toolbarMenuButtonForegroundStyle: makeToolbarLucideStyle('toolbar_cog'),
 
   toolbarTranslateButton: {
     backgroundStyle: 'toolbarButtonBackgroundStyle',
@@ -89,14 +96,7 @@ local getToolBar(theme) = {
       runScript: '快捷翻译',
     },
   },
-  toolbarTranslateButtonForegroundStyle: {
-    buttonStyleType: 'systemImage',
-    systemImageName: 'translate',
-    normalColor: color[theme]['toolbar按键颜色'],
-    highlightColor: color[theme]['toolbar按键颜色'],
-    fontSize: fontSize['toolbar按键前景sf符号大小'],
-    center: center['toolbar按键sf符号偏移'],
-  },
+  toolbarTranslateButtonForegroundStyle: makeToolbarLucideStyle('toolbar_globe'),
 
   toolbarEmojiButton: {
     backgroundStyle: 'toolbarButtonBackgroundStyle',
@@ -105,14 +105,7 @@ local getToolBar(theme) = {
       keyboardType: 'emojis',
     },
   },
-  toolbarEmojiButtonForegroundStyle: {
-    buttonStyleType: 'systemImage',
-    systemImageName: 'face.smiling',
-    normalColor: color[theme]['toolbar按键颜色'],
-    highlightColor: color[theme]['toolbar按键颜色'],
-    fontSize: fontSize['toolbar按键前景sf符号大小'],
-    center: center['toolbar按键sf符号偏移'],
-  },
+  toolbarEmojiButtonForegroundStyle: makeToolbarLucideStyle('toolbar_laugh'),
 
   toolbarPhraseeButton: {
     backgroundStyle: 'toolbarButtonBackgroundStyle',
@@ -121,14 +114,7 @@ local getToolBar(theme) = {
       shortcutCommand: '#showPhraseView',
     },
   },
-  toolbarPhraseeButtonForegroundStyle: {
-    buttonStyleType: 'systemImage',
-    systemImageName: 'text.bubble',
-    normalColor: color[theme]['toolbar按键颜色'],
-    highlightColor: color[theme]['toolbar按键颜色'],
-    fontSize: fontSize['toolbar按键前景sf符号大小'],
-    center: center['toolbar按键sf符号偏移'],
-  },
+  toolbarPhraseeButtonForegroundStyle: makeToolbarLucideStyle('toolbar_book'),
 
   toolbarPasteboardButton: {
     backgroundStyle: 'toolbarButtonBackgroundStyle',
@@ -137,14 +123,7 @@ local getToolBar(theme) = {
       shortcutCommand: '#showPasteboardView',
     },
   },
-  toolbarPasteboardButtonForegroundStyle: {
-    buttonStyleType: 'systemImage',
-    systemImageName: 'doc.on.clipboard',
-    normalColor: color[theme]['toolbar按键颜色'],
-    highlightColor: color[theme]['toolbar按键颜色'],
-    fontSize: fontSize['toolbar按键前景sf符号大小'],
-    center: center['toolbar按键sf符号偏移'],
-  },
+  toolbarPasteboardButtonForegroundStyle: makeToolbarLucideStyle('toolbar_book_open'),
 
 
   toolbarScriptButton: {
@@ -154,14 +133,7 @@ local getToolBar(theme) = {
       shortcutCommand: '#toggleScriptView',
     },
   },
-  toolbarScriptButtonForegroundStyle: {
-    buttonStyleType: 'systemImage',
-    systemImageName: 'apple.terminal',
-    normalColor: color[theme]['toolbar按键颜色'],
-    highlightColor: color[theme]['toolbar按键颜色'],
-    fontSize: fontSize['toolbar按键前景sf符号大小'],
-    center: center['toolbar按键sf符号偏移'],
-  },
+  toolbarScriptButtonForegroundStyle: makeToolbarLucideStyle('toolbar_container'),
   toolbarSimp2tranButton: {
     backgroundStyle: 'toolbarButtonBackgroundStyle',
     foregroundStyle: [
@@ -182,35 +154,14 @@ local getToolBar(theme) = {
     },
   },
 
-  simpStyle: {
-    buttonStyleType: 'systemImage',
-    systemImageName: 'character',
-    normalColor: color[theme]['toolbar按键颜色'],
-    highlightColor: color[theme]['toolbar按键颜色'],
-    fontSize: fontSize['toolbar按键前景sf符号大小'],
-    center: center['toolbar按键sf符号偏移'],
-  },
-  tranStyle: {
-    buttonStyleType: 'systemImage',
-    systemImageName: 'character.book.closed',
-    normalColor: color[theme]['toolbar按键颜色'],
-    highlightColor: color[theme]['toolbar按键颜色'],
-    fontSize: fontSize['toolbar按键前景sf符号大小'],
-    center: center['toolbar按键sf符号偏移'],
-  },
+  simpStyle: makeToolbarLucideStyle('toolbar_languages'),
+  tranStyle: makeToolbarLucideStyle('toolbar_languages'),
   toolbarCloseButton: {
     backgroundStyle: 'toolbarButtonBackgroundStyle',
     foregroundStyle: 'toolbarCloseButtonForegroundStyle',
     action: 'dismissKeyboard',
   },
-  toolbarCloseButtonForegroundStyle: {
-    buttonStyleType: 'systemImage',
-    systemImageName: 'chevron.down',
-    normalColor: color[theme]['toolbar按键颜色'],
-    highlightColor: color[theme]['toolbar按键颜色'],
-    fontSize: fontSize['toolbar按键前景sf符号大小'],
-    center: center['toolbar按键sf符号偏移'],
-  },
+  toolbarCloseButtonForegroundStyle: makeToolbarLucideStyle('toolbar_chevron_down'),
 
   // 横向候选样式
   horizontalCandidatesStyle: {

@@ -112,7 +112,7 @@ local pinyinSpecific(theme, orientation) =
         normalColor: color[theme]['按键前景颜色'],
         highlightColor: color[theme]['按键前景颜色'],
         fontSize: fontSize['按键前景文字大小'],
-        center: { x: 0.65, y: 0.55 },
+        center: { x: 0.50, y: 0.55 },
       }
     ),
 
