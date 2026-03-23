@@ -45,7 +45,7 @@
     b: { action: { character: '>' }, label: { text: '>' } },
     n: { action: { shortcut: '#次选上屏' }, label: { text: '次' }, fontSize: 8 },
     m: { action: { shortcut: '#三选上屏' }, label: { text: '三' }, fontSize: 8 },
-    '123': { action: { shortcut: '#RimeSwitcher' } },
+    '123': { action: { floatKeyboardType: 'panel' } },
     spaceRight: { action: { symbol: '.' } },
     space: { action: { keyboardType: 'alphabetic' } },  // 如果你没加一个中英切换键，最好别改这个
     // "backspace": {"action": { "character": "。" }, "label": {"text": "。"}},

@@ -131,7 +131,7 @@ local keyboard(theme, orientation) =
         bottom: 24,
         right: 24,
       },
-      backgroundStyle: 'keyboardBackgroundStyle',
+      // backgroundStyle: 'keyboardBackgroundStyle',
     },
     keyboardBackgroundStyle: {
       buttonStyleType: 'fileImage',

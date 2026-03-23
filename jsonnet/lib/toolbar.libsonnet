@@ -74,13 +74,12 @@ local getToolBar(theme) = {
   },
 
   toolbarMenuButtonForegroundStyle: {
-    buttonStyleType: 'text',
-    text: '面板',
+    buttonStyleType: 'systemImage',
+    systemImageName: 'square.grid.2x2',
     normalColor: color[theme]['toolbar按键颜色'],
     highlightColor: color[theme]['toolbar按键颜色'],
-    fontSize: fontSize['toolbar按键前景文字大小'],
-    center: center['toolbar按键文字偏移'],
-    fontWeight: 'medium',
+    fontSize: fontSize['toolbar按键前景sf符号大小'],
+    center: center['toolbar按键sf符号偏移'],
   },
 
   toolbarTranslateButton: {
@@ -91,13 +90,12 @@ local getToolBar(theme) = {
     },
   },
   toolbarTranslateButtonForegroundStyle: {
-    buttonStyleType: 'text',
-    text: '翻译',
+    buttonStyleType: 'systemImage',
+    systemImageName: 'translate',
     normalColor: color[theme]['toolbar按键颜色'],
     highlightColor: color[theme]['toolbar按键颜色'],
-    fontSize: fontSize['toolbar按键前景文字大小'],
-    center: center['toolbar按键文字偏移'],
-    fontWeight: 'medium',
+    fontSize: fontSize['toolbar按键前景sf符号大小'],
+    center: center['toolbar按键sf符号偏移'],
   },
 
   toolbarEmojiButton: {
@@ -108,13 +106,12 @@ local getToolBar(theme) = {
     },
   },
   toolbarEmojiButtonForegroundStyle: {
-    buttonStyleType: 'text',
-    text: '表情',
+    buttonStyleType: 'systemImage',
+    systemImageName: 'face.smiling',
     normalColor: color[theme]['toolbar按键颜色'],
     highlightColor: color[theme]['toolbar按键颜色'],
-    fontSize: fontSize['toolbar按键前景文字大小'],
-    center: center['toolbar按键文字偏移'],
-    fontWeight: 'medium',
+    fontSize: fontSize['toolbar按键前景sf符号大小'],
+    center: center['toolbar按键sf符号偏移'],
   },
 
   toolbarPhraseeButton: {
@@ -125,13 +122,12 @@ local getToolBar(theme) = {
     },
   },
   toolbarPhraseeButtonForegroundStyle: {
-    buttonStyleType: 'text',
-    text: '短语',
+    buttonStyleType: 'systemImage',
+    systemImageName: 'text.bubble',
     normalColor: color[theme]['toolbar按键颜色'],
     highlightColor: color[theme]['toolbar按键颜色'],
-    fontSize: fontSize['toolbar按键前景文字大小'],
-    center: center['toolbar按键文字偏移'],
-    fontWeight: 'medium',
+    fontSize: fontSize['toolbar按键前景sf符号大小'],
+    center: center['toolbar按键sf符号偏移'],
   },
 
   toolbarPasteboardButton: {
@@ -142,13 +138,12 @@ local getToolBar(theme) = {
     },
   },
   toolbarPasteboardButtonForegroundStyle: {
-    buttonStyleType: 'text',
-    text: '剪贴',
+    buttonStyleType: 'systemImage',
+    systemImageName: 'doc.on.clipboard',
     normalColor: color[theme]['toolbar按键颜色'],
     highlightColor: color[theme]['toolbar按键颜色'],
-    fontSize: fontSize['toolbar按键前景文字大小'],
-    center: center['toolbar按键文字偏移'],
-    fontWeight: 'medium',
+    fontSize: fontSize['toolbar按键前景sf符号大小'],
+    center: center['toolbar按键sf符号偏移'],
   },
 
 
@@ -160,13 +155,12 @@ local getToolBar(theme) = {
     },
   },
   toolbarScriptButtonForegroundStyle: {
-    buttonStyleType: 'text',
-    text: '脚本',
+    buttonStyleType: 'systemImage',
+    systemImageName: 'apple.terminal',
     normalColor: color[theme]['toolbar按键颜色'],
     highlightColor: color[theme]['toolbar按键颜色'],
-    fontSize: fontSize['toolbar按键前景文字大小'],
-    center: center['toolbar按键文字偏移'],
-    fontWeight: 'medium',
+    fontSize: fontSize['toolbar按键前景sf符号大小'],
+    center: center['toolbar按键sf符号偏移'],
   },
   toolbarSimp2tranButton: {
     backgroundStyle: 'toolbarButtonBackgroundStyle',
@@ -189,22 +183,20 @@ local getToolBar(theme) = {
   },
 
   simpStyle: {
-    buttonStyleType: 'text',
-    text: '简体',
+    buttonStyleType: 'systemImage',
+    systemImageName: 'character',
     normalColor: color[theme]['toolbar按键颜色'],
     highlightColor: color[theme]['toolbar按键颜色'],
-    fontSize: fontSize['toolbar按键前景文字大小'],
-    center: center['toolbar按键文字偏移'],
-    fontWeight: 'medium',
+    fontSize: fontSize['toolbar按键前景sf符号大小'],
+    center: center['toolbar按键sf符号偏移'],
   },
   tranStyle: {
-    buttonStyleType: 'text',
-    text: '繁体',
+    buttonStyleType: 'systemImage',
+    systemImageName: 'character.book.closed',
     normalColor: color[theme]['toolbar按键颜色'],
     highlightColor: color[theme]['toolbar按键颜色'],
-    fontSize: fontSize['toolbar按键前景文字大小'],
-    center: center['toolbar按键文字偏移'],
-    fontWeight: 'medium',
+    fontSize: fontSize['toolbar按键前景sf符号大小'],
+    center: center['toolbar按键sf符号偏移'],
   },
   toolbarCloseButton: {
     backgroundStyle: 'toolbarButtonBackgroundStyle',
@@ -212,13 +204,12 @@ local getToolBar(theme) = {
     action: 'dismissKeyboard',
   },
   toolbarCloseButtonForegroundStyle: {
-    buttonStyleType: 'text',
-    text: '收起',
+    buttonStyleType: 'systemImage',
+    systemImageName: 'chevron.down',
     normalColor: color[theme]['toolbar按键颜色'],
     highlightColor: color[theme]['toolbar按键颜色'],
-    fontSize: fontSize['toolbar按键前景文字大小'],
-    center: center['toolbar按键文字偏移'],
-    fontWeight: 'medium',
+    fontSize: fontSize['toolbar按键前景sf符号大小'],
+    center: center['toolbar按键sf符号偏移'],
   },
 
   // 横向候选样式
