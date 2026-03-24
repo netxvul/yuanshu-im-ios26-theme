@@ -35,15 +35,19 @@ local pinyinSpecific(theme, orientation) =
       }
     ),
 
-    symbolButtonForegroundStyle: utils.makeSystemImageStyle(
-      params={
-        systemImageName: 'pencil.tip',
-        normalColor: color[theme]['按键前景颜色'],
-        highlightColor: color[theme]['按键前景颜色'],
-        fontSize: fontSize['按键前景文字大小'] + 2,
-        center: center['功能键前景文字偏移'] { y: 0.5 },
-      }
-    ),
+    symbolButtonForegroundStyle: {
+      buttonStyleType: 'fileImage',
+      contentMode: 'scaleAspectFit',
+      normalImage: {
+        file: 'key_popcorn',
+        image: 'IMG1',
+      },
+      highlightImage: {
+        file: 'key_popcorn',
+        image: 'IMG1',
+      },
+      center: center['功能键前景文字偏移'] { y: 0.5 },
+    },
 
     spaceButton: createButton(
       params={
