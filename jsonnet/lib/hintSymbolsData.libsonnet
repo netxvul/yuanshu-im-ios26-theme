@@ -95,33 +95,15 @@
     //         {"action": { "symbol": "P" }, "label": { "text": "P" }}
     //     ]
     // },
-    j: {
-      selectedIndex: 1,
-      list: [
-        { action: { openURL: '#pasteboardContent' }, label: { systemImageName: 'safari.fill' }, fontSize: 18 },
-        { action: { runTranslateScript: '谷歌中英互译' }, label: { systemImageName: 'translate' }, fontSize: 18 },
-        { action: { runScript: 'DeepSeek' }, label: { systemImageName: 'cursorarrow.click.2' }, fontSize: 18 },
-        { action: { runScript: 'Info' }, label: { systemImageName: 'gear' }, fontSize: 18 },
-        { action: { runScript: 'AI' }, label: { systemImageName: 'app.gift' },
-
-        fontSize: 18 },
-      ],
-    },
     h: {
       selectedIndex: 1,
       list: [
-        { action: { symbol: 'https://' }, label: { text: 'https' }, fontSize: 18 },
-        { action: { symbol: 'http://' }, label: { text: 'http' }, fontSize: 18 },
-        { action: { symbol: '.com' }, label: { text: 'com' }, fontSize: 18 },
-        { action: { symbol: '.cn' }, label: { text: 'cn' }, fontSize: 18 },
-        { action: { symbol: '.dev' }, label: { text: 'dev' }, fontSize: 18 },
-        { action: { symbol: '.org' }, label: { text: 'org' }, fontSize: 18 },
-      ],
-    },
-    k: {
-      selectedIndex: 0,
-      list: [
-        { action: { keyboardType: 'linux_terminal' }, label: { systemImageName: 'keyboard' }, fontSize: 18 }
+        { action: { symbol: 'https://' }, label: { file: 'hint_shield_half' }, fontSize: 18 },
+        { action: { symbol: 'http://' }, label: { file: 'hint_shield' }, fontSize: 18 },
+        { action: { symbol: '.com' }, label: { file: 'toolbar_globe' }, fontSize: 18 },
+        { action: { symbol: '.cn' }, label: { file: 'hint_map_pinned' }, fontSize: 18 },
+        { action: { symbol: '.dev' }, label: { file: 'hint_square_code' }, fontSize: 18 },
+        { action: { symbol: '.org' }, label: { file: 'hint_building_2' }, fontSize: 18 },
       ],
     },
     d: {
@@ -136,22 +118,27 @@
     m: {
       selectedIndex: 0,
       list: [
-        { action: { sendKeys: '/mail' }, label: { systemImageName: 'tray' }, fontSize: 18 },
-        { action: { sendKeys: '/omail' }, label: { systemImageName: 'tray.full' }, fontSize: 18 },
-        { action: { sendKeys: '/ip' }, label: { systemImageName: 'rectangle.and.pencil.and.ellipsis' }, fontSize: 18 },
-        { action: { sendKeys: '/web' }, label: { systemImageName: 'globe.asia.australia' }, fontSize: 18 },
-        { action: { sendKeys: '/nas' }, label: { systemImageName: 'globe.asia.australia.fill' }, fontSize: 18 },
+        { action: { sendKeys: '/mail' }, label: { file: 'hint_mail' }, fontSize: 18 },
+        { action: { sendKeys: '/omail' }, label: { file: 'hint_at_sign' }, fontSize: 18 },
+        { action: { sendKeys: '/ip' }, label: { file: 'hint_ethernet_port' }, fontSize: 18 },
+        { action: { sendKeys: '/web' }, label: { file: 'toolbar_globe' }, fontSize: 18 },
+      ],
+    },
+    n: {
+      selectedIndex: 0,
+      list: [
+        { action: { sendKeys: '/nas' }, label: { file: 'hint_server_cog' }, fontSize: 18 },
       ],
     },
     '123': {
       selectedIndex: 0,
       size: { width: 40, height: 40 },
       list: [
-        { action: { shortcut: '#showPasteboardView' }, label: { systemImageName: 'receipt' } , fontSize: 18},
-        { action: { shortcut: '#showPhraseView' }, label: { systemImageName: 'book.pages' } , fontSize: 18},
-        { action: { shortcut: '#toggleScriptView' }, label: { systemImageName: 'apple.terminal' }, fontSize: 18 },
-        { action: { shortcut: '#简繁切换' }, label: { systemImageName: 'chineseyuanrenminbisign.gauge.chart.leftthird.topthird.rightthird' },fontSize: 18 },
-        { action: { shortcut: '#方案切换' }, label: { systemImageName: 'pencil.tip.crop.circle' } ,fontSize: 18 },
+        { action: { shortcut: '#showPasteboardView' }, label: { file: 'hint_clipboard_type' }, fontSize: 18 },
+        { action: { shortcut: '#showPhraseView' }, label: { file: 'toolbar_book_open' }, fontSize: 18 },
+        { action: { shortcut: '#toggleScriptView' }, label: { file: 'hint_scroll_text' }, fontSize: 18 },
+        { action: { shortcut: '#简繁切换' }, label: { file: 'toolbar_languages' }, fontSize: 18 },
+        { action: { shortcut: '#方案切换' }, label: { file: 'hint_book_type' }, fontSize: 18 },
 
       ],
     },

@@ -23,16 +23,37 @@ local systemImageStyle(systemImageName, fs, theme) = {
   center: center['长按气泡sf符号偏移'],
 };
 
+local fileImageStyle(file) = {
+  buttonStyleType: 'fileImage',
+  contentMode: 'scaleAspectFit',
+  normalImage: {
+    file: file,
+    image: 'IMG1',
+  },
+  highlightImage: {
+    file: file,
+    image: 'IMG1',
+  },
+  center: center['长按气泡sf符号偏移'],
+};
+
 
 // 长按符号样式生成
 local holdSymbolsStyle(key, selectedIndex, size, symbol_list, theme) = {
   [key + 'ButtonHintSymbolsStyle']: {
     insets: { top: 2, bottom: 2, left: 2, right: 2 },
     backgroundStyle: 'alphabeticHintSymbolsBackgroundStyle',
-    [if size != {} then 'size']: {
-      width: size.width,
-      height: size.height,
-    },
+    size:
+      if size != {} then
+        {
+          width: size.width,
+          height: size.height,
+        }
+      else
+        {
+          width: 40,
+          height: 40,
+        },
     symbolStyles: [
       key + 'ButtonHintSymbolsStyleOf' + std.toString(index)
       for index in std.range(0, std.length(symbol_list) - 1)
@@ -49,6 +70,8 @@ local holdSymbolsStyle(key, selectedIndex, size, symbol_list, theme) = {
         if std.objectHas(symbol_list[index], 'fontSize') then symbol_list[index].fontSize else fontSize['长按气泡文字大小'],
         theme
       )
+    else if std.objectHas(symbol_list[index].label, 'file') then
+      fileImageStyle(symbol_list[index].label.file)
     else
       systemImageStyle(
         symbol_list[index].label.systemImageName,

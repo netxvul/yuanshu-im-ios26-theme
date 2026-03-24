@@ -536,15 +536,19 @@ local keyboard(theme, orientation) =
       }
     ),
 
-    symbolButtonForegroundStyle: utils.makeSystemImageStyle(
-      params={
-        systemImageName: 'pencil.tip',
-        normalColor: color[theme]['按键前景颜色'],
-        highlightColor: color[theme]['按键前景颜色'],
-        fontSize: fontSize['按键前景文字大小'] + 2,
-        center: center['功能键前景文字偏移'] { y: 0.5 },
-      }
-    ),
+    symbolButtonForegroundStyle: {
+      buttonStyleType: 'fileImage',
+      contentMode: 'scaleAspectFit',
+      normalImage: {
+        file: 'key_popcorn',
+        image: 'IMG1',
+      },
+      highlightImage: {
+        file: 'key_popcorn',
+        image: 'IMG1',
+      },
+      center: center['功能键前景文字偏移'] { y: 0.5 },
+    },
     // 空格键
     spaceButton: createButton(
       params={
@@ -573,15 +577,19 @@ local keyboard(theme, orientation) =
       }
     ),
 
-    spaceRightButtonForegroundStyle: utils.makeSystemImageStyle(
-      params={
-        systemImageName: 'volleyball',
-        normalColor: color[theme]['按键前景颜色'],
-        highlightColor: color[theme]['按键前景颜色'],
-        fontSize: fontSize['按键前景文字大小'] + 2,
-        center: center['功能键前景文字偏移'] { y: 0.5 },
-      }
-    ),
+    spaceRightButtonForegroundStyle: {
+      buttonStyleType: 'fileImage',
+      contentMode: 'scaleAspectFit',
+      normalImage: {
+        file: 'key_hat_glasses',
+        image: 'IMG1',
+      },
+      highlightImage: {
+        file: 'key_hat_glasses',
+        image: 'IMG1',
+      },
+      center: center['功能键前景文字偏移'] { y: 0.5 },
+    },
     // ==================== 背景样式 ====================
     // 字符键背景（数字、符号、标点）
     alphabeticBackgroundStyle: utils.makeGeometryStyle(

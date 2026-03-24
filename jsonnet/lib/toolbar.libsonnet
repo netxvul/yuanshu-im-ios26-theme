@@ -133,7 +133,7 @@ local getToolBar(theme) = {
       shortcutCommand: '#toggleScriptView',
     },
   },
-  toolbarScriptButtonForegroundStyle: makeToolbarLucideStyle('toolbar_container'),
+  toolbarScriptButtonForegroundStyle: makeToolbarLucideStyle('toolbar_scroll'),
   toolbarSimp2tranButton: {
     backgroundStyle: 'toolbarButtonBackgroundStyle',
     foregroundStyle: [

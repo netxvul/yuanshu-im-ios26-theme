@@ -79,61 +79,6 @@ local config = {
       floating: 'symbolic_portrait',
     },
   },
-  linux_terminal: {
-    iPhone: {
-      portrait: 'linux_terminal_portrait',
-      landscape: 'linux_terminal_landscape',
-    },
-    iPad: {
-      portrait: 'linux_terminal_landscape',
-      landscape: 'linux_terminal_landscape',
-      floating: 'linux_terminal_portrait',
-    },
-  },
-  linux_terminal_file: {
-    iPhone: {
-      portrait: 'linux_terminal_file_portrait',
-      landscape: 'linux_terminal_file_landscape',
-    },
-    iPad: {
-      portrait: 'linux_terminal_file_landscape',
-      landscape: 'linux_terminal_file_landscape',
-      floating: 'linux_terminal_file_portrait',
-    },
-  },
-  linux_terminal_shell: {
-    iPhone: {
-      portrait: 'linux_terminal_shell_portrait',
-      landscape: 'linux_terminal_shell_landscape',
-    },
-    iPad: {
-      portrait: 'linux_terminal_shell_landscape',
-      landscape: 'linux_terminal_shell_landscape',
-      floating: 'linux_terminal_shell_portrait',
-    },
-  },
-  linux_terminal_git: {
-    iPhone: {
-      portrait: 'linux_terminal_git_portrait',
-      landscape: 'linux_terminal_git_landscape',
-    },
-    iPad: {
-      portrait: 'linux_terminal_git_landscape',
-      landscape: 'linux_terminal_git_landscape',
-      floating: 'linux_terminal_git_portrait',
-    },
-  },
-  linux_terminal_ssh: {
-    iPhone: {
-      portrait: 'linux_terminal_ssh_portrait',
-      landscape: 'linux_terminal_ssh_landscape',
-    },
-    iPad: {
-      portrait: 'linux_terminal_ssh_landscape',
-      landscape: 'linux_terminal_ssh_landscape',
-      floating: 'linux_terminal_ssh_portrait',
-    },
-  },
 };
 
 local pinyin = import 'keyboard/pinyin_26.jsonnet';
@@ -143,7 +88,6 @@ local numericLandscape = import 'keyboard/numeric_9_landscape.jsonnet';
 local symbolic = import 'keyboard/symbolic_portrait.jsonnet';
 local iphoneNumeric = import 'keyboard/iphone_numeric.jsonnet';
 local iphoneSymbolic = import 'keyboard/iphone_symbolic.jsonnet';
-local linuxTerminal = import 'keyboard/linux_terminal.jsonnet';
 // local emoji = import 'keyboard/emoji_portrait.jsonnet';
 local panel = import 'keyboard/panel.jsonnet';
 
@@ -180,28 +124,6 @@ local lightIphoneSymbolicPortrait = iphoneSymbolic.new('light', 'portrait');
 local darkIphoneSymbolicPortrait = iphoneSymbolic.new('dark', 'portrait');
 local lightIphoneSymbolicLandscape = iphoneSymbolic.new('light', 'landscape');
 local darkIphoneSymbolicLandscape = iphoneSymbolic.new('dark', 'landscape');
-
-// Linux terminal
-local lightLinuxTerminalPortrait = linuxTerminal.new('light', 'portrait');
-local darkLinuxTerminalPortrait = linuxTerminal.new('dark', 'portrait');
-local lightLinuxTerminalLandscape = linuxTerminal.new('light', 'landscape');
-local darkLinuxTerminalLandscape = linuxTerminal.new('dark', 'landscape');
-local lightLinuxTerminalFilePortrait = linuxTerminal.newByCategory('light', 'portrait', 'file');
-local darkLinuxTerminalFilePortrait = linuxTerminal.newByCategory('dark', 'portrait', 'file');
-local lightLinuxTerminalFileLandscape = linuxTerminal.newByCategory('light', 'landscape', 'file');
-local darkLinuxTerminalFileLandscape = linuxTerminal.newByCategory('dark', 'landscape', 'file');
-local lightLinuxTerminalShellPortrait = linuxTerminal.newByCategory('light', 'portrait', 'shell');
-local darkLinuxTerminalShellPortrait = linuxTerminal.newByCategory('dark', 'portrait', 'shell');
-local lightLinuxTerminalShellLandscape = linuxTerminal.newByCategory('light', 'landscape', 'shell');
-local darkLinuxTerminalShellLandscape = linuxTerminal.newByCategory('dark', 'landscape', 'shell');
-local lightLinuxTerminalGitPortrait = linuxTerminal.newByCategory('light', 'portrait', 'git');
-local darkLinuxTerminalGitPortrait = linuxTerminal.newByCategory('dark', 'portrait', 'git');
-local lightLinuxTerminalGitLandscape = linuxTerminal.newByCategory('light', 'landscape', 'git');
-local darkLinuxTerminalGitLandscape = linuxTerminal.newByCategory('dark', 'landscape', 'git');
-local lightLinuxTerminalSshPortrait = linuxTerminal.newByCategory('light', 'portrait', 'ssh');
-local darkLinuxTerminalSshPortrait = linuxTerminal.newByCategory('dark', 'portrait', 'ssh');
-local lightLinuxTerminalSshLandscape = linuxTerminal.newByCategory('light', 'landscape', 'ssh');
-local darkLinuxTerminalSshLandscape = linuxTerminal.newByCategory('dark', 'landscape', 'ssh');
 
 // emoji
 // local lightEmojiPortrait = emoji.new('light');
@@ -248,28 +170,6 @@ local darkPanelLandscape = panel.new('dark', 'landscape');
   'dark/iphone_symbolic_portrait.yaml': std.toString(darkIphoneSymbolicPortrait),
   'light/iphone_symbolic_landscape.yaml': std.toString(lightIphoneSymbolicLandscape),
   'dark/iphone_symbolic_landscape.yaml': std.toString(darkIphoneSymbolicLandscape),
-
-  // Linux terminal
-  'light/linux_terminal_portrait.yaml': std.toString(lightLinuxTerminalPortrait),
-  'dark/linux_terminal_portrait.yaml': std.toString(darkLinuxTerminalPortrait),
-  'light/linux_terminal_landscape.yaml': std.toString(lightLinuxTerminalLandscape),
-  'dark/linux_terminal_landscape.yaml': std.toString(darkLinuxTerminalLandscape),
-  'light/linux_terminal_file_portrait.yaml': std.toString(lightLinuxTerminalFilePortrait),
-  'dark/linux_terminal_file_portrait.yaml': std.toString(darkLinuxTerminalFilePortrait),
-  'light/linux_terminal_file_landscape.yaml': std.toString(lightLinuxTerminalFileLandscape),
-  'dark/linux_terminal_file_landscape.yaml': std.toString(darkLinuxTerminalFileLandscape),
-  'light/linux_terminal_shell_portrait.yaml': std.toString(lightLinuxTerminalShellPortrait),
-  'dark/linux_terminal_shell_portrait.yaml': std.toString(darkLinuxTerminalShellPortrait),
-  'light/linux_terminal_shell_landscape.yaml': std.toString(lightLinuxTerminalShellLandscape),
-  'dark/linux_terminal_shell_landscape.yaml': std.toString(darkLinuxTerminalShellLandscape),
-  'light/linux_terminal_git_portrait.yaml': std.toString(lightLinuxTerminalGitPortrait),
-  'dark/linux_terminal_git_portrait.yaml': std.toString(darkLinuxTerminalGitPortrait),
-  'light/linux_terminal_git_landscape.yaml': std.toString(lightLinuxTerminalGitLandscape),
-  'dark/linux_terminal_git_landscape.yaml': std.toString(darkLinuxTerminalGitLandscape),
-  'light/linux_terminal_ssh_portrait.yaml': std.toString(lightLinuxTerminalSshPortrait),
-  'dark/linux_terminal_ssh_portrait.yaml': std.toString(darkLinuxTerminalSshPortrait),
-  'light/linux_terminal_ssh_landscape.yaml': std.toString(lightLinuxTerminalSshLandscape),
-  'dark/linux_terminal_ssh_landscape.yaml': std.toString(darkLinuxTerminalSshLandscape),
 
   // emoji
   // 'light/emoji_portrait.yaml': std.toString(lightEmojiPortrait),
