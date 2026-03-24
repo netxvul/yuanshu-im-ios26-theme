@@ -127,7 +127,7 @@
     n: {
       selectedIndex: 0,
       list: [
-        { action: { sendKeys: '/nas' }, label: { file: 'hint_server_cog' }, fontSize: 18 },
+        { action: { sendKeys: '/nas' }, label: { file: 'hint_globe_lock' }, fontSize: 18 },
       ],
     },
     '123': {
