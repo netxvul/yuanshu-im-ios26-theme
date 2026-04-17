@@ -55,29 +55,29 @@ local makeSystemImageStyle(params={}) =
     highlightColor: std.get(params, 'highlightColor'),
   });
 
-  local makeGeometryStyle(params = {}) =
-    std.prune({
-      buttonStyleType: 'geometry',
-      insets: std.get(params, 'insets'),
-      normalColor: std.get(params, 'normalColor'),
-      highlightColor: std.get(params, 'highlightColor'),
-      colorLocation: std.get(params, 'colorLocation'),
-      colorStartPoint: std.get(params, 'colorStartPoint'),
-      colorEndPoint: std.get(params, 'colorEndPoint'),
-      colorGradientType: std.get(params, 'colorGradientType'),
-      cornerRadius: std.get(params, 'cornerRadius'),
-      borderSize: std.get(params, 'borderSize'),
-      borderColor: std.get(params, 'borderColor'),
-      normalLowerEdgeColor: std.get(params, 'normalLowerEdgeColor'),
-      highlightLowerEdgeColor: std.get(params, 'highlightLowerEdgeColor'),
-      normalShadowColor: std.get(params, 'normalShadowColor'),
-      highlightShadowColor: std.get(params, 'highlightShadowColor'),
-      shadowOpacity: std.get(params, 'shadowOpacity'),
-      shadowRadius: std.get(params, 'shadowRadius'),
-      shadowOffset: std.get(params, 'shadowOffset'),
-    });
+local makeGeometryStyle(params={}) =
+  std.prune({
+    buttonStyleType: 'geometry',
+    insets: std.get(params, 'insets'),
+    normalColor: std.get(params, 'normalColor'),
+    highlightColor: std.get(params, 'highlightColor'),
+    colorLocation: std.get(params, 'colorLocation'),
+    colorStartPoint: std.get(params, 'colorStartPoint'),
+    colorEndPoint: std.get(params, 'colorEndPoint'),
+    colorGradientType: std.get(params, 'colorGradientType'),
+    cornerRadius: std.get(params, 'cornerRadius'),
+    borderSize: std.get(params, 'borderSize'),
+    borderColor: std.get(params, 'borderColor'),
+    normalLowerEdgeColor: std.get(params, 'normalLowerEdgeColor'),
+    highlightLowerEdgeColor: std.get(params, 'highlightLowerEdgeColor'),
+    normalShadowColor: std.get(params, 'normalShadowColor'),
+    highlightShadowColor: std.get(params, 'highlightShadowColor'),
+    shadowOpacity: std.get(params, 'shadowOpacity'),
+    shadowRadius: std.get(params, 'shadowRadius'),
+    shadowOffset: std.get(params, 'shadowOffset'),
+  });
 
-local makeAssetImageStyle(params = {}) =
+local makeAssetImageStyle(params={}) =
   std.prune({
     buttonStyleType: 'assetImage',
     insets: std.get(params, 'insets'),
@@ -172,7 +172,7 @@ local genAlphabeticStyles(theme) =
 
 local genNumberStyles(theme) = {
   ['number' + num + 'ButtonForegroundStyle']: makeTextStyle(
-    params = {
+    params={
       text: std.toString(num),
       fontSize: fontSize['数字键盘数字前景字体大小'],
       normalColor: color[theme]['按键前景颜色'],

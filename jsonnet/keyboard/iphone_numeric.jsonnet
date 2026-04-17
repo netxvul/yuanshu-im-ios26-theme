@@ -1,6 +1,6 @@
 // iphone_numeric.jsonnet
 // iPhone 数字符号键盘 - 基于 default 皮肤 iPhoneNumeric.libsonnet 布局
-// 4行10列布局: 数字(1-0) + 常用中文符号 + 功能键
+// 4行10列布局: 数字(1-0) + 常用英文符号 + 功能键
 
 local animation = import '../lib/animation.libsonnet';
 local center = import '../lib/center.libsonnet';
@@ -242,7 +242,7 @@ local keyboard(theme, orientation) =
     // ==================== 第二行: 常用符号 ====================
     // 连接号(减号)
     hyphenButton: createButton(
-      params={ key: 'hyphen', size: std.get(ButtonSize, '普通键size'), action: { character: '-' } }
+      params={ key: 'hyphen', size: std.get(ButtonSize, '普通键size'), action: { symbol: '-' } }
     ),
     hyphenButtonForegroundStyle: utils.makeTextStyle(
       params={
@@ -255,7 +255,7 @@ local keyboard(theme, orientation) =
 
     // 斜杠
     forwardSlashButton: createButton(
-      params={ key: 'forwardSlash', size: std.get(ButtonSize, '普通键size'), action: { character: '/' } }
+      params={ key: 'forwardSlash', size: std.get(ButtonSize, '普通键size'), action: { symbol: '/' } }
     ),
     forwardSlashButtonForegroundStyle: utils.makeTextStyle(
       params={
@@ -268,29 +268,29 @@ local keyboard(theme, orientation) =
 
     // 中文冒号
     chineseColonButton: createButton(
-      params={ key: 'chineseColon', size: std.get(ButtonSize, '普通键size'), action: { symbol: '：' } }
+      params={ key: 'chineseColon', size: std.get(ButtonSize, '普通键size'), action: { symbol: ':' } }
     ),
     chineseColonButtonForegroundStyle: utils.makeTextStyle(
       params={
-        text: '：',
+        text: ':',
         fontSize: fontSize['按键前景文字大小'],
         normalColor: color[theme]['按键前景颜色'],
         highlightColor: color[theme]['按键前景颜色'],
-        center: chineseSymbolicCenter,
+        // center: chineseSymbolicCenter,
       }
     ),
 
     // 中文分号
     chineseSemicolonButton: createButton(
-      params={ key: 'chineseSemicolon', size: std.get(ButtonSize, '普通键size'), action: { symbol: '；' } }
+      params={ key: 'chineseSemicolon', size: std.get(ButtonSize, '普通键size'), action: { symbol: ';' } }
     ),
     chineseSemicolonButtonForegroundStyle: utils.makeTextStyle(
       params={
-        text: '；',
+        text: ';',
         fontSize: fontSize['按键前景文字大小'],
         normalColor: color[theme]['按键前景颜色'],
         highlightColor: color[theme]['按键前景颜色'],
-        center: chineseSymbolicCenter,
+        // center: chineseSymbolicCenter,
       }
     ),
 
@@ -346,26 +346,26 @@ local keyboard(theme, orientation) =
       }
     ),
 
-    // 左双引号 "
+    // 双引号 "
     leftCurlyQuoteButton: createButton(
-      params={ key: 'leftCurlyQuote', size: std.get(ButtonSize, '普通键size'), action: { symbol: '\u201c' } }
+      params={ key: 'leftCurlyQuote', size: std.get(ButtonSize, '普通键size'), action: { symbol: '"' } }
     ),
     leftCurlyQuoteButtonForegroundStyle: utils.makeTextStyle(
       params={
-        text: '\u201c',
+        text: '"',
         fontSize: fontSize['按键前景文字大小'],
         normalColor: color[theme]['按键前景颜色'],
         highlightColor: color[theme]['按键前景颜色'],
       }
     ),
 
-    // 右双引号 "
+    // 双引号 "
     rightCurlyQuoteButton: createButton(
-      params={ key: 'rightCurlyQuote', size: std.get(ButtonSize, '普通键size'), action: { symbol: '\u201d' } }
+      params={ key: 'rightCurlyQuote', size: std.get(ButtonSize, '普通键size'), action: { symbol: '"' } }
     ),
     rightCurlyQuoteButtonForegroundStyle: utils.makeTextStyle(
       params={
-        text: '\u201d',
+        text: '"',
         fontSize: fontSize['按键前景文字大小'],
         normalColor: color[theme]['按键前景颜色'],
         highlightColor: color[theme]['按键前景颜色'],
@@ -392,51 +392,48 @@ local keyboard(theme, orientation) =
       }
     ),
 
-    // 中文句号
+    // 英文句号
     chinesePeriodButton: createButton(
-      params={ key: 'chinesePeriod', size: std.get(ButtonSize, '普通键size'), action: { symbol: '。' } }
+      params={ key: 'chinesePeriod', size: std.get(ButtonSize, '普通键size'), action: { symbol: '.' } }
     ),
     chinesePeriodButtonForegroundStyle: utils.makeTextStyle(
       params={
-        text: '。',
+        text: '.',
         fontSize: fontSize['按键前景文字大小'],
         normalColor: color[theme]['按键前景颜色'],
         highlightColor: color[theme]['按键前景颜色'],
-        center: chineseSymbolicCenter,
       }
     ),
 
-    // 中文逗号
+    // 英文逗号
     chineseCommaButton: createButton(
-      params={ key: 'chineseComma', size: std.get(ButtonSize, '普通键size'), action: { symbol: '，' } }
+      params={ key: 'chineseComma', size: std.get(ButtonSize, '普通键size'), action: { symbol: ',' } }
     ),
     chineseCommaButtonForegroundStyle: utils.makeTextStyle(
       params={
-        text: '，',
+        text: ',',
         fontSize: fontSize['按键前景文字大小'],
         normalColor: color[theme]['按键前景颜色'],
         highlightColor: color[theme]['按键前景颜色'],
-        center: chineseSymbolicCenter,
       }
     ),
 
-    // 顿号
+    // 撇号
     ideographicCommaButton: createButton(
-      params={ key: 'ideographicComma', size: std.get(ButtonSize, '普通键size'), action: { symbol: '、' } }
+      params={ key: 'ideographicComma', size: std.get(ButtonSize, '普通键size'), action: { symbol: "'" } }
     ),
     ideographicCommaButtonForegroundStyle: utils.makeTextStyle(
       params={
-        text: '、',
+        text: "'",
         fontSize: fontSize['按键前景文字大小'],
         normalColor: color[theme]['按键前景颜色'],
         highlightColor: color[theme]['按键前景颜色'],
-        center: chineseSymbolicCenter,
       }
     ),
 
     // 井号
     hashButton: createButton(
-      params={ key: 'hash', size: std.get(ButtonSize, '普通键size'), action: { character: '#' } }
+      params={ key: 'hash', size: std.get(ButtonSize, '普通键size'), action: { symbol: '#' } }
     ),
     hashButtonForegroundStyle: utils.makeTextStyle(
       params={
@@ -447,31 +444,29 @@ local keyboard(theme, orientation) =
       }
     ),
 
-    // 中文问号
+    // 英文问号
     chineseQuestionMarkButton: createButton(
-      params={ key: 'chineseQuestionMark', size: std.get(ButtonSize, '普通键size'), action: { symbol: '？' } }
+      params={ key: 'chineseQuestionMark', size: std.get(ButtonSize, '普通键size'), action: { symbol: '?' } }
     ),
     chineseQuestionMarkButtonForegroundStyle: utils.makeTextStyle(
       params={
-        text: '？',
+        text: '?',
         fontSize: fontSize['按键前景文字大小'],
         normalColor: color[theme]['按键前景颜色'],
         highlightColor: color[theme]['按键前景颜色'],
-        center: chineseSymbolicCenter,
       }
     ),
 
-    // 中文感叹号
+    // 英文感叹号
     chineseExclamationMarkButton: createButton(
-      params={ key: 'chineseExclamationMark', size: std.get(ButtonSize, '普通键size'), action: { symbol: '！' } }
+      params={ key: 'chineseExclamationMark', size: std.get(ButtonSize, '普通键size'), action: { symbol: '!' } }
     ),
     chineseExclamationMarkButtonForegroundStyle: utils.makeTextStyle(
       params={
-        text: '！',
+        text: '!',
         fontSize: fontSize['按键前景文字大小'],
         normalColor: color[theme]['按键前景颜色'],
         highlightColor: color[theme]['按键前景颜色'],
-        center: chineseSymbolicCenter,
       }
     ),
 
@@ -619,9 +614,9 @@ local keyboard(theme, orientation) =
     ButtonScaleAnimation: animation['26键按键动画'],
   }
   + enterKey.genEnterSection(theme, createButton, 'sharedDynamic', {
-      size: std.get(ButtonSize, 'enter键size'),
-      isChar: false,
-    }, ButtonSize);
+    size: std.get(ButtonSize, 'enter键size'),
+    isChar: false,
+  }, ButtonSize);
 
 {
   new(theme, orientation='portrait'):
