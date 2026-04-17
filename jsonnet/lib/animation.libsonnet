@@ -4,8 +4,8 @@
     {
       animationType: 'scale',
       isAutoReverse: true,
-      scale: 0.87,
-      pressDuration: 60,
-      releaseDuration: 80,
+      scale: 0.90,
+      pressDuration: 70,
+      releaseDuration: 140,
     },
 }
