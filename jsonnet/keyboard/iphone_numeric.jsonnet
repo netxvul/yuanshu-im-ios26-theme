@@ -572,19 +572,14 @@ local keyboard(theme, orientation) =
       }
     ),
 
-    spaceRightButtonForegroundStyle: {
-      buttonStyleType: 'fileImage',
-      contentMode: 'scaleAspectFit',
-      normalImage: {
-        file: 'key_hat_glasses',
-        image: 'IMG1',
-      },
-      highlightImage: {
-        file: 'key_hat_glasses',
-        image: 'IMG1',
-      },
-      center: center['功能键前景文字偏移'] { y: 0.5 },
-    },
+    spaceRightButtonForegroundStyle: utils.makeTextStyle(
+      params={
+        text: 'ツ',
+        fontSize: fontSize['按键前景文字大小'],
+        normalColor: color[theme]['按键前景颜色'],
+        highlightColor: color[theme]['按键前景颜色'],
+      }
+    ),
     // ==================== 背景样式 ====================
     // 字符键背景（数字、符号、标点）
     alphabeticBackgroundStyle: utils.makeGeometryStyle(
